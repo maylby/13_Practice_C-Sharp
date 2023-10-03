@@ -133,21 +133,22 @@
 // 46 -> нет
 // 161 -> да
 
-System.Console.Write("Input number: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int a = 7;
-int b = 23;
+// System.Console.Write("Input number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int a = 7;
+// int b = 23;
 
-void Multiplicity ()
-{
-    if(num%(a*b) == 0)
-    {
-        System.Console.WriteLine($"{num} -> multiple {a}, {b}");
-    }
-    else
-    {
-        System.Console.WriteLine($"{num} -> not multiple {a}, {b}");
-    }
-}
-Multiplicity ();
+// void Multiplicity ()
+// {
+    // if(num%(a*b) == 0) // или так:
+    // if (num % a == 0 && num % b == 0);
+//     {
+//         System.Console.WriteLine($"{num} -> multiple {a}, {b}");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine($"{num} -> not multiple {a}, {b}");
+//     }
+// }
+// Multiplicity ();
 
