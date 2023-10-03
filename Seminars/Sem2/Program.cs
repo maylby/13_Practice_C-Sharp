@@ -83,27 +83,28 @@
 // 12-> 2
 // 85 -> 8
 
-int FindBiiggesDigit(int num)
-{
-    int ed = num%10;
-    int dec = num/10;
-    // int ed = Convert.ToInt32(string[1]);
-    // int dec = Convert.ToInt32(string[0]);
+// int FindBiiggesDigit(int num)
+// {
+//     int ed = num%10;
+//     int dec = num/10;
+//     // int ed = Convert.ToInt32(string[1]);
+//     // int dec = Convert.ToInt32(string[0]);
     
-    if(ed > dec)
-    {
-        return ed;
-    }
-    else
-    {
-        return dec;
-    }
-}
-int num = new Random().Next(10, 99 + 1);
+//     if(ed > dec)
+//     {
+//         return ed;
+//     }
+//     else
+//     {
+//         return dec;
+//     }
+// }
+// int num = new Random().Next(10, 99 + 1);
 
 // int result = FindBiiggesDigit(num);
 // System.Console.Write($"{num} -> {result}");
 
-System.Console.WriteLine(FindBiiggesDigit(num)); // Вариант команды для получения и вывода результата на экран
+// System.Console.WriteLine(num);
+// System.Console.WriteLine(FindBiiggesDigit(num)); // Вариант команды для получения и вывода результата на экран
 
 
