@@ -115,6 +115,17 @@
 // 918 -> 98
 
 
+// void Reduction ()
+// {
+//     int x = new Random().Next(100, 999 + 1);
+//     int num = (x%100 - x%10)/10;
+//     int num2 = x - num * 10;
+//     System.Console.WriteLine(x);
+//     System.Console.Write($"{num} -> {num2}");
+// }   
+// Reduction ();
+
+
 // Задача 4
 // Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
 
