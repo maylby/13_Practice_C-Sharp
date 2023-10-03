@@ -18,30 +18,53 @@
 //     System.Console.WriteLine("You input not three-digit number");
 // }
 
-System.Console.Write("Input number: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Input number: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input number: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input number: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
 
-while(num1 < num2) // Применён возвращающий оператор "while", результат верный, но выдан в виде бесконечной ценпочки  
-{
-    if(num2%num1 == 0)
-    {
-        System.Console.WriteLine($"{num2} -> {num1} - multiple");
-    }
-    else
-    {
-        System.Console.WriteLine($"{num2} -> {num1} - not multiple");
-    }
-}
-while(num1 > num2)
+
+// while(num1 < num2) // Применён возвращающий оператор "while", результат верный, но выдан в виде бесконечной ценпочки  
+// {
+//     if(num2%num1 == 0)
+//     {
+//         System.Console.WriteLine($"{num2} -> {num1} - multiple");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine($"{num2} -> {num1} - not multiple");
+//     }
+// }
+// while(num1 > num2)
+// {
+//     if(num1%num2 == 0)
+//     {
+//         System.Console.WriteLine($"{num1} -> {num2} - multiple");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine($"{num1} -> {num2} - not multiple");
+//     }
+// }
+
+// void CheckMultiplicity (int num1, int num2)
+
+
+void CheckMultiplicity (int num1, int num2)
 {
     if(num1%num2 == 0)
     {
-        System.Console.WriteLine($"{num1} -> {num2} - multiple");
+        System.Console.WriteLine($"{num1}, {num2} -> multiple");
     }
     else
     {
-        System.Console.WriteLine($"{num1} -> {num2} - not multiple");
+        System.Console.WriteLine($"{num1}, {num2} -> not multiple, remainder: {num1%num2}");
     }
 }
+
+System.Console.Write("Input first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Input second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+CheckMultiplicity(num1, num2);
