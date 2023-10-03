@@ -55,21 +55,32 @@
 // Задание 1
 // Решение с помощью невозвращающего оператора **void**
 
-void CheckMultiplicity (int num1, int num2)
-{
-    if(num1%num2 == 0)
-    {
-        System.Console.WriteLine($"{num1}, {num2} -> multiple");
-    }
-    else
-    {
-        System.Console.WriteLine($"{num1}, {num2} -> not multiple, remainder: {num1%num2}");
-    }
-}
+// void CheckMultiplicity (int num1, int num2)
+// {
+//     if(num1%num2 == 0)
+//     {
+//         System.Console.WriteLine($"{num1}, {num2} -> multiple");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine($"{num1}, {num2} -> not multiple, remainder: {num1%num2}");
+//     }
+// }
 
-System.Console.Write("Input first number: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Input second number: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input first number: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input second number: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
 
-CheckMultiplicity(num1, num2);
+// CheckMultiplicity(num1, num2);
+
+
+// Задание 2
+// Архип Чижанов 
+// Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+// 78 -> 8
+// 12-> 2
+// 85 -> 8
+
+int FindBiiggesDigit(int num)
