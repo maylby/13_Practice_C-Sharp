@@ -18,6 +18,9 @@
 //     System.Console.WriteLine("You input not three-digit number");
 // }
 
+// Задание 1
+// Решение с помощью возвращающего оператора **while**
+
 // System.Console.Write("Input number: ");
 // int num1 = Convert.ToInt32(Console.ReadLine());
 // System.Console.Write("Input number: ");
@@ -49,6 +52,8 @@
 
 // void CheckMultiplicity (int num1, int num2)
 
+// Задание 1
+// Решение с помощью невозвращающего оператора **void**
 
 void CheckMultiplicity (int num1, int num2)
 {
