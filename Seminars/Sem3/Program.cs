@@ -99,3 +99,21 @@
 // Напишите программу, которая принимает на вход координаты точки
 // (X и Y), причём X=0 и Y=0 и выдаёт номер четверти плоскости,
 // в которой находится точка.
+
+// int Vvod(string message)
+// {
+// 	System.Console.Write(message);
+// 	int number = Convert.ToInt32(Console.ReadLine());
+// 	return number; 
+// }
+// int x = Vvod("Введите координату Х: ");
+// int y = Vvod("Введите координату Y: ");
+// int Quarter(int A, int B)
+// {
+// 	if(A > 0 && B > 0) return 1;
+// 	if(A < 0 && B > 0) return 2;
+// 	if(A < 0 && B < 0) return 3;
+// 	if(A > 0 && B < 0) return 4;
+// 	else return 0;
+// }
+// System.Console.WriteLine(Quarter(x, y));
