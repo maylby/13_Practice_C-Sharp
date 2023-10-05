@@ -5,10 +5,30 @@
 // <https://gb.ru/lessons/362979/homework>
 
 // Задача 10: 
-// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+// Напишите программу, которая принимает на вход трёхзначное число 
+// и на выходе показывает вторую цифру этого числа.
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
+
+// int Prompt (string message)
+// {
+//     System.Console.Write(message);
+//     string value = Console.ReadLine();
+//     int result = Convert.ToInt32(value);
+//     return result;
+// }
+
+// int number = Prompt("Введите трёхзначное число: ");
+// if (number < 100 || number >= 1000)
+// {
+//     Console.WriteLine("Введено не трёхзначное число, повторите ввод");
+//     return;
+// }
+// Console.WriteLine($"Введенное число: {number}");
+// int secondRank = number / 10%10;
+// Console.WriteLine($"Вторая цифра: {secondRank}");
+
 
 // Задача 13: 
 // Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
