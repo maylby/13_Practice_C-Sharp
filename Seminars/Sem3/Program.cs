@@ -66,9 +66,27 @@
 
 // 00:35:50
 // Студенты
-
 // Илья Канаев
+
 // Задача 1
 // Программа принимает на входе число (N) 
 // и выдаёт таблицу квадратов чисел от 1 до N.
 // 5 -> 1, 4, 9, 16, 25
+
+// void Kvadrats(int N)
+// {
+// 	int index = 1;
+// 	while (index <= N)
+// 	{
+// 		System.Console.Write($"{index * index}, ");
+// 		index++;
+// 	}
+// }
+
+// int Vvod(string message)
+// {
+// 	System.Console.Write(message);
+// 	int number = Convert.ToInt32(Console.ReadLine());
+// 	return number; 
+// }
+// Kvadrats(Vvod("Введите число: "));
