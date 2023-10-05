@@ -8,7 +8,7 @@
 int DigitCount (int num)
 {
     int count = 1;
-    while (num > 10)
+    while (Math.Abs(num) > 10) // "(Math.Abs(num)" - число по модулю (положительное и отрицательное)
     {
         num = num / 10;
         count++;
