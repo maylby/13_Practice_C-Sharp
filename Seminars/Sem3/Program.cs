@@ -63,3 +63,12 @@
 // double yb = Convert.ToInt32(Console.ReadLine());
 
 // System.Console.Write($"A({xa}, {ya}); B({xb}, {yb}) -> {FindDistance(xa, ya, xb, yb)}");
+
+// 00:35:50
+// Студенты
+
+// Илья Канаев
+// Задача 1
+// Программа принимает на входе число (N) 
+// и выдаёт таблицу квадратов чисел от 1 до N.
+// 5 -> 1, 4, 9, 16, 25
