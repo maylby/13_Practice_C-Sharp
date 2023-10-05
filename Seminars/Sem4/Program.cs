@@ -85,6 +85,33 @@
 // System.Console.WriteLine(Number (A));
 
 
+// Задача 3. 
+// Второй вариант записи 
+
+// int Vvod(string messege)
+// {
+//     Console.WriteLine(messege);
+//     int x = Convert.ToInt32(Console.ReadLine());
+//     return x;
+// }
+
+// int Number (int A)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= A; i++)
+//     {
+//         sum = sum += i;
+//     }
+//     return sum;
+// }
+
+
+// int A = Vvod("Input A: ");
+// System.Console.WriteLine(Number (A));
+
+
+
+// Задача 4.
 // Напишите программу, которая принимает на вход число N 
 // и выдаёт произведение чисел от 1 до N.
 
