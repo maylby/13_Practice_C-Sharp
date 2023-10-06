@@ -192,3 +192,51 @@
 // // System.Console.WriteLine($"Yes, {num} -> in the array"); // разделить вывод ответов "No" и "Yes"
 // // System.Console.WriteLine($"No {num} -> in the array");
 // System.Console.WriteLine(ExistenceInArray(num, myArray));
+
+
+// 00:53:00
+
+// Задача 3+
+// (Ручной ввод массива, вместо "Random")
+
+// Создайите массив. 
+// Напишите программу, которая определяет, 
+// присутствует ли заданное число в массиве.
+
+// int[] CreateUserArray(int size) 
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         Console.Write("Imput element array: " );
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++ )
+//     {
+//         System.Console.Write( array[i] + " ");
+//     }
+//     System.Console.WriteLine(); // <- Пропуск в блоке вывода результата на экран
+// }
+
+// bool ExistenceInArray(int num, int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] == num) return true;
+//     }
+//     return false;
+// }
+
+// System.Console.Write("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Imput number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateUserArray(size);
+// PrintArray(myArray);
+System.Console.WriteLine(ExistenceInArray(num, myArray));
