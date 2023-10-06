@@ -73,3 +73,59 @@
 // Задайте одномерный массив из 123 случайных чисел. 
 // Найдите количество элементов массива,
 // значения которых лежат в отрезке [10,99].
+
+// Универсальный код для создания произвольного массива пользователем.
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue +1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++ )
+//     {
+//         System.Console.Write( array[i] + " ");
+//     }
+//     System.Console.WriteLine(); // <- Пустая строка - пропуск в блоке вывода результата на экран
+// }
+
+// int QuantityInTheSegments(int max, int min, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] <= max && array[i] >= min)
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// System.Console.WriteLine("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput minimal value: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput maximal value: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput lower border value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput upper border value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRandomArray(size, minValue, maxValue);
+// PrintArray(myArray);
+// System.Console.WriteLine(QuantityInTheSegments(min, max, myArray));
+
+// 00:40:30
+
+// Задача 3.
+// Задайте массив. 
+// Напишите программу, которая определяет, 
+// присутствует ли заданное число в массиве.
