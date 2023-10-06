@@ -46,7 +46,8 @@ void FindMinMaxSum(int[] array)
             negativSum += array[i];
         }
     }
-    System.Console.WriteLine($"Sum of positivSum arrau elements -> {positivSum} \n Sum of negativSum arrau elements -> {negativSum}");
+    System.Console.WriteLine($"Sum of positivSum arrau elements -> {positivSum} \nSum of negativSum arrau elements -> {negativSum}");
+
     // Значок "\n" разделяет две разных записи в одной строке, а
     // значок "+" (плюс) связывает текст в единый блок, в случае переноса части текста на другую строку. 
     // Выше стоящюю конструкцию не удалось разделить на части и перенести на другую строку описанным способом. 
@@ -64,3 +65,4 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[] myArray = CreateRandomArray(size, min, max);
 PrintArray(myArray);
 FindMinMaxSum(myArray);
+
