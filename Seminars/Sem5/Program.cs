@@ -239,4 +239,13 @@
 
 // int[] myArray = CreateUserArray(size);
 // PrintArray(myArray);
-System.Console.WriteLine(ExistenceInArray(num, myArray));
+// System.Console.WriteLine(ExistenceInArray(num, myArray));
+
+
+// 00:57:50
+
+// Задача 2. 
+// Напишите программу замена элементов массива: 
+// положительные элементы замените на соответствующие отрицательные, и наоборот.
+
+//[-4, -8, 8, 2] -> [4, 8, -8, -2]
