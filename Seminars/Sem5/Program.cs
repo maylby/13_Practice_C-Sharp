@@ -129,3 +129,66 @@
 // Задайте массив. 
 // Напишите программу, которая определяет, 
 // присутствует ли заданное число в массиве.
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue +1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++ )
+//     {
+//         System.Console.Write( array[i] + " ");
+//     }
+//     System.Console.WriteLine(); // <- Пустая строка - пропуск в блоке вывода результата на экран
+// }
+
+// // int RequiredNumber(int num, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
+// // {
+// //     int count = 0;
+// //     for (int i = 0; i < array.Length; i++)
+// //     {
+// //         if (array[i] == num)
+// //         {
+// //             System.Console.Write( num[i] + "" );
+// //             count++;
+// //         }
+// //         else
+// //         {
+// //             count++;
+// //         }
+// //     }
+// //     return count; // Возвращаем "count" или "array" ?
+// // }
+
+// bool ExistenceInArray(int num, int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] == num) return true;
+//     }
+//     return false;
+// }
+
+// System.Console.WriteLine("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput minimal value: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput maximal value: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRandomArray(size, minValue, maxValue);
+// PrintArray(myArray);
+// // System.Console.WriteLine(RequiredNumber(num, myArray));
+// // RequiredNumber(num, myArray);
+// // System.Console.WriteLine($"Yes, {num} -> in the array"); // разделить вывод ответов "No" и "Yes"
+// // System.Console.WriteLine($"No {num} -> in the array");
+// System.Console.WriteLine(ExistenceInArray(num, myArray));
