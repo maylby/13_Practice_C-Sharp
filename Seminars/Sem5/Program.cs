@@ -3,12 +3,14 @@
 
 // 00:12:50
 
-//Задача 1 (разбор)
+// Задача 1 
+// (разбор)
+
 // Задайте массив из 12 элементов, 
 // заполненный случайными числами из промежутка [-9, 9].
 // Найдите сумму отрицательных и положительных элементов массива.
 
-//Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] 
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] 
 // сумма положительных чисел равна 29, 
 // сумма отрицательных равна -20.
 
@@ -249,3 +251,72 @@
 // положительные элементы замените на соответствующие отрицательные, и наоборот.
 
 //[-4, -8, 8, 2] -> [4, 8, -8, -2]
+
+// Моя попытка решения 'Задачи 2'
+
+// // int[] CreateUserArray(int size) // ручной ввод массива
+// // {
+// //     int[] array1 = new int[size];
+// //     for (int i = 0; i < size; i++)
+// //     {
+// //         Console.Write("Imput element array1: " );
+// //         array1[i] = Convert.ToInt32(Console.ReadLine());
+// //     }
+// //     return array1;
+    
+// //     int[] array2 = new int[size];
+// //     for (int i = 0; i < size; i++)
+// //     {
+// //         Console.Write("Imput element array1: " );
+// //         array1[i] = Convert.ToInt32(Console.ReadLine());
+// //     }
+// //     return array1;
+// // }
+
+// int[] CreateRandomArray(int size, int[] array1, int array2) 
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue +1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array1, int[] array2)
+// {
+//     for (int i = 0; i < array1.Length; i++ )
+//     {
+//         System.Console.Write( array1[i] + " ");
+//     }
+//         for (int i = 0; i < array2.Length; i++ )
+//     {
+//         System.Console.Write( array2[i] + " ");
+//     }
+//     System.Console.WriteLine(); // <- Пропуск в блоке вывода результата на экран
+// }
+
+// // !!!- Начало здесь
+
+// int[] ChangeElements(int[] array1, int[] array2)
+// {
+//     // int positiv = 0;
+//     // int negativ = 0;
+//     for (int i = 0; i < array1.Length; i++)
+//     {
+//         if (array1[i] < 0) return array2;
+//     }
+//     return array1;
+// }
+
+// System.Console.Write("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Imput number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray1 = CreateUserArray(size);
+// int[] myArray2 = CreateUserArray(size);
+// PrintArray(myArray1, myArray2);
+// System.Console.WriteLine(ChangeElements(myArray1, myArray2));
+
+
