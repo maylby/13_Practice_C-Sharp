@@ -19,3 +19,28 @@ int EvenNumberCount(int[] count) //(???)
 	}
 	retun count;
 }
+
+
+
+// Задача 36: 
+// Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях.
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
+
+
+int[] SumOddPositions(int[] sum) // "Amount" (cумма) "Odd" (нечет)
+
+for (int i = 0; i < array.Length; i++ )
+{
+	int[] sum = 0;
+	if (int i % 2 == 0)
+	{
+		return i; // (?) "return i" или "return index"?
+	}
+	else
+	{
+		sum = sum + array[i];
+	}
+	renurn; // (?) "renurn" или "return i"
+}
