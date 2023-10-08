@@ -39,7 +39,7 @@
 // 	// "array.Length/2" -завершение цикла на середине массива, 
 // 	// чтобы не переставлять назад уже преставленные числа
 // 	{
-// 		array[i] = array[array.Length - 1 - i]; // "array.Length - 1" -> "size-1"
+// 		array[i] = array[array.Length - 1 - i]; // (?) "array.Length - 1" -> "size-1"
 // 		array[array.Length - 1 - i] = temp;
 // 	}
 // 	return array; 	
@@ -82,9 +82,9 @@
 // string DecimalToBinary(int num)
 // {
 // 	string result = string.Empty; // Пустая ("Empty") строка, т.е. "result" = 0
-// 	wile (num > 0)
+// 	while (num > 0)
 // 	{
-// 		resalt = num % 2 + result;
+// 		result = num % 2 + result;
 // 		num /= 2; // Сокращенная запись: "num = num / 2"
 // 	}
 // 	return result;
@@ -101,9 +101,9 @@
 // // и определяющую, существует ли треугольник со сторонами такой длины
 
 
-// bool TriangleSides(int[] a, int[] b, int[] c)
+// bool TriangleSides(int a, int b, int c)
 // {
-//     if (a < b + c && b < a + c && c < a + b) return true;
+//     if ((a < b + c) && (b < a + c) && (c < a + b)) return true;
 //     else return false;
 // }
 
@@ -116,8 +116,9 @@
 
 // System.Console.WriteLine(TriangleSides(a, b, c)); // "return" возвращает "true"/"false"
 
+// 00:53:00
 
-// // Здача 44 (зал /Юлия Вознюк/)
+// // Задача 44 (зал)
 // // Проанализировать решение студентки
 
 // // Не используя рекусию, выведите первые N чисел Фибоначи
@@ -130,27 +131,102 @@
 // // Последовательность Фибоначи:
 // // 0+1=1 1+1=2 2+1=3 3+2=5 5+3=8
 
-// // моё решение:
+// // * Юлия Вознюк
 
-int SequenceFibonachi(int[] num)
+// using System;
+// public class Sem6_4
+// {
+//     public static void Main(string[] args)
+//     {
+//         Console.Write("Imput N: ");
+//         int n = Convert.ToInt32(Console.ReadLine());
+//         int[] fibonachi = new int[n];
+//         PrintArray(Fibonachi(fibonachi));
+//     }
+//     public static int[] Fibonachi(int[] fibonachi)
+//     {
+//         fibonachi[0] = 0;
+//         fibonachi[1] = 1;
+//         for(int i = 2; i < fibonachi.Length; i++)
+//         {
+//             fibonachi[i] = fibonachi[i-1] + fibonachi[i-2];
+//         }
+//         return fibonachi;
+//     }
+//     public static void PrintArray(int[] array)
+//     {
+//         for(int i = 0; i < array.Length; i++)
+//         {
+//             if (i == 0)
+//             {
+//                 Console.Write($"[{array[i]}, ");
+//             }
+//             else if (i == array.Length - 1)
+//             {
+//                 Console.Write($"{array[i]}]");
+//             }
+//             else
+//             {
+//                 Console.Write($"{array[i]}, ");
+//             }
+//         }
+//     }
+// }
 
-int num = array;
-int array[0] = 0;
-int array[1] = 1;
-int index = i;
-int i = 2;
 
-string result = string.Empty;
-wile (i < array)
+
+// ** моё решение:
+
+// Вариант 1
+
+void PrintArray(int[] array) // Выводит на экран созданный массив
 {
-	result = result	+ array[i]; 
-	array[i] = array[i-1] + array[i-2];
+    for (int i = 0; i < array.Length; i++ ) // цикл  повторений до завершения
+    {
+        System.Console.Write( array[i] + " "); // содержимое массива
+    }
+    System.Console.WriteLine(); // <- Пустая строка при выводе на экран
 }
-retun result;
 
-System.Console.Write("Imput number: ");
+int[] Fibonachi(int[] array)
+{
+    array[0] = 0;
+    array[1] = 1;
+    for (int i = 2; i < array.Length; i++)
+    {
+        array[i] = arrayi[i-1] + array[i-2];
+    }
+    return array;
+}
+
+System.Console.Write("Imput N: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int myNum = SequenceFibonachi(num)
-System.Console.Write($"Если N = {num} -> {myNum}");
+PrintArray(Fibonachi(array));
+// int myArray = Fibonachi(array);
+// System.Console.Write($"Если N = {num} -> {myArray}");        
 
 
+// Вариант 2
+
+// string SequenceFibonachi(int[] array)
+// {
+//     int num = array;
+//     int i = 2;
+//     // int num[0] = 0;
+//     // int num[1] = 1;
+//     int [i-2]num = 0;
+//     int [i-1]num = 1;
+
+//     string result = string.Empty;
+//     while (i < array)
+//     {
+// 	    result = result	+ num[i]; 
+// 	    num[i] = num[i-1] + num[i-2];
+//     }
+//     return result;
+// }
+
+// System.Console.Write("Imput number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int myNum = SequenceFibonachi(array);
+// System.Console.Write($"Если N = {num} -> {myNum}");
