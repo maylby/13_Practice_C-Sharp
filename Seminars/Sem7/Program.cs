@@ -23,6 +23,8 @@
 
 
 // **Задача 48:** 
+// (зал /Илья Канаев/)
+
 // Задайте двумерный массив размера m на n, 
 // каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
 
@@ -31,8 +33,42 @@
 // 1 2 3 4
 // 2 3 4 5
 
-// Илья Канаев
+// !!! - Система сообщает об ошибке в cs(66,12): не удается преобразовать из "int[*,*]" в "int[]"
 
+void PrintArray(int[] array) // Выводит на экран созданный массив
+{
+    for (int i = 0; i < array.Length; i++ ) // цикл  повторений до завершения
+    {
+        System.Console.Write( array[i] + " "); // содержимое массива
+    }
+    System.Console.WriteLine(); // <- Пустая строка при выводе на экран
+}
+
+int[,] Create2DArray(int row, int column)
+{
+    int [,] array = new int[row, column];
+    for (int i= 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            array[i,j] = i + j;
+        }
+    }
+    return array;
+}
+
+Console.WriteLine("Input number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input number of columns: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+
+int[,] myArray = Create2DArray(rows, columns);
+PrintArray(myArray);
+
+// Сообщение об ошибке: Не удается преобразовать из "int[*,*]" в "int[]"
+// * Строка cs(66,12), т.е. "PrintArray(myArray)", при наличии запятой в скобках (int[,] myArray)
+// * Строка cs(65,17), т.у. "Create2DArray(rows, columns)" - после удаления запятой (int[] myArray)
+// Что не так?
 
 
 // **Задача 49:** 
