@@ -61,14 +61,9 @@ Console.WriteLine("Input number of rows: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input number of columns: ");
 int columns = Convert.ToInt32(Console.ReadLine());
-
-int[,] myArray = Create2DArray(rows, columns);
-PrintArray(myArray);
-
-// Сообщение об ошибке: Не удается преобразовать из "int[*,*]" в "int[]"
-// * Строка cs(66,12), т.е. "PrintArray(myArray)", при наличии запятой в скобках (int[,] myArray)
-// * Строка cs(65,17), т.у. "Create2DArray(rows, columns)" - после удаления запятой (int[] myArray)
-// Что не так?
+// Ошибка: Не удается преобразовать из "int[*,*]" в "int[]"
+int[,] myArray = Create2DArray(rows, columns); // cs(65,17), при удалении запятой из "int[] myArray"
+PrintArray(myArray); // cs(66,12), при наличии запятой в скобках "int[,] myArray" 
 
 
 // **Задача 49:** 
