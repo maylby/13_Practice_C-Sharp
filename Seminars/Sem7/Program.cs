@@ -67,6 +67,8 @@
 
 
 // **Задача 49:** 
+// (зал /Юлия Вознюк/)
+
 // Задайте двумерный массив. 
 // Найдите элементы, у которых оба индекса чётные, 
 // и замените эти элементы на их квадраты.
@@ -83,3 +85,67 @@
 // 5 **81** 2 **9**
 // 8 4 2 4
 
+
+// using System;
+// public class Sem1Task4
+// {
+//     // error: Программа не содержит статического метода "Main", подходящего для точки входа
+//     public static void Main(string[] args) 
+//     {
+//         Console.WriteLine(); // пустая строка - разрыв текста при выводе на экран
+//         Console.Write("Input row: ");
+//         int row = Convert.ToInt32(Console.ReadLine());
+//         Console.Write("Input columns: ");
+//         int columns = Convert.ToInt32(Console.ReadLine());
+//         Console.Write("Input min: ");
+//         int min = Convert.ToInt32(Console.ReadLine());
+//         Console.Write("Input max: ");
+//         int max = Convert.ToInt32(Console.ReadLine());
+//         Console.WriteLine(); // пустая строка - разрыв текста при выводе на экран
+//         int[,] myArray = Create2DRandomArray(row, columns, min, max);
+//         Console.WriteLine("Start 2d array: ");
+//         Print2DArray(myArray);
+//         Refill2DArray(myArray);
+//         Console.WriteLine(); // пустая строка - разрыв текста при выводе на экран
+//         Console.WriteLine("New 2d array: ");
+//         Print2DArray(myArray);
+//         Console.WriteLine(); // пустая строка - разрыв текста при выводе на экран
+//     }
+//     public static int[,] Create2DRandomArray(int row, int column, int minValue, int maxValue)
+//     {
+//         int[,] array = new int[row, column];
+//         for (int i = 0; i < row; i++)
+//         {
+//             for (int j = 0; j < column; j++)
+//             {
+//                 array[i, j] = new Random().Next(minValue, maxValue);
+//             }
+//         }
+//         return array;
+//     }
+//     public static void Print2DArray(int[,] array)
+//     {
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < array.GetLength(1); j++)
+//                 {
+//                     Console.Write($"{array[i, j]} ");
+//                 }
+//                 Console.WriteLine();
+//         }
+//     }
+//     public static void Refill2DArray(int[,] array)
+//     {
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < array.GetLength(1); j++)
+//             {
+//                 if (i % 2 == 0 && j % 2 == 0)
+//                 {
+//                     array[i, j] *= array[i, j];
+//                 }
+//             }
+//         }
+//     }
+
+// }
