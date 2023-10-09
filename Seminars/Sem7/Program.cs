@@ -35,35 +35,35 @@
 
 // !!! - Система сообщает об ошибке в cs(66,12): не удается преобразовать из "int[*,*]" в "int[]"
 
-void PrintArray(int[] array) // Выводит на экран созданный массив
-{
-    for (int i = 0; i < array.Length; i++ ) // цикл  повторений до завершения
-    {
-        System.Console.Write( array[i] + " "); // содержимое массива
-    }
-    System.Console.WriteLine(); // <- Пустая строка при выводе на экран
-}
+// void PrintArray(int[] array) // Выводит на экран созданный массив
+// {
+//     for (int i = 0; i < array.Length; i++ ) // цикл  повторений до завершения
+//     {
+//         System.Console.Write( array[i] + " "); // содержимое массива
+//     }
+//     System.Console.WriteLine(); // <- Пустая строка при выводе на экран
+// }
 
-int[,] Create2DArray(int row, int column)
-{
-    int [,] array = new int[row, column];
-    for (int i= 0; i < row; i++)
-    {
-        for (int j = 0; j < column; j++)
-        {
-            array[i,j] = i + j;
-        }
-    }
-    return array;
-}
+// int[,] Create2DArray(int row, int column)
+// {
+//     int [,] array = new int[row, column];
+//     for (int i= 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             array[i,j] = i + j;
+//         }
+//     }
+//     return array;
+// }
 
-Console.WriteLine("Input number of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number of columns: ");
-int columns = Convert.ToInt32(Console.ReadLine());
-// Ошибка: Не удается преобразовать из "int[*,*]" в "int[]"
-int[,] myArray = Create2DArray(rows, columns); // cs(65,17), при удалении запятой из "int[] myArray"
-PrintArray(myArray); // cs(66,12), при наличии запятой в скобках "int[,] myArray" 
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// // Ошибка: Не удается преобразовать из "int[*,*]" в "int[]"
+// int[,] myArray = Create2DArray(rows, columns); // cs(65,17), при удалении запятой из "int[] myArray"
+// PrintArray(myArray); // cs(66,12), при наличии запятой в скобках "int[,] myArray" 
 
 
 // **Задача 49:** 
