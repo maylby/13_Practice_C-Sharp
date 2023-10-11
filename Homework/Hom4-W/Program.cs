@@ -51,5 +51,19 @@
 // 82 -> 10
 // 9012 -> 12 
 
-// int SumNumber(int num)
+// int DigitSum(int num)
+// {
+//     int sum = 0;
+//     // while (num > 0) 
+//     while (Math.Abs(num) > 0) // "Math.Abs(num)" - число по модулю (положительное и отрицательное)
+//     {
+//         sum += num % 10; // <- sum = sum + num%10; 
+//         num = num / 10;
+//     }
+//     return sum;
+// }
+// System.Console.WriteLine("Imput number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// System.Console.Write($"{DigitSum(num)}");
 
