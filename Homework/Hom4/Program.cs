@@ -6,42 +6,41 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-// int PowerBase(int a, int b, int result)
+// int Power(int basis, int expo)
 // {
 // 	int power = 1;
-// 	for (int i = 0; i < b; i++)
+// 	for (int i = 0; i < expo; i++)
 // 	{
-// 		power = power * a;
+// 		power = power * basis;
 // 	}
-// 	return result;
+// 	return power;
 // }
 
-// bool ErrorExpo(int b)
+// bool ErrorExponent(int expo)
 // {
-// 	if (b < 0)
-// 	{
-// 		Console.WriteLine("Введите число больше нуля");
-// 		return false; 
-// 	}
-// 	return true;
-// }
-
-// void PrintPower(int[] a, int[] b, int[] result)
-// {
-//     for (int i = 0; i < b; i++ )
+// 	   if (expo < 0)
 //     {
-//         System.Console.Write($"{a}, {b} -> {result}");
+// 		Console.WriteLine("Експонент - не меньше нуля");
 //     }
-// }
+//     return true;
+// }	
 
-// // System.Console.WriteLine("Введите основание: ");
-// // int a = Convert.ToInt32(Console.ReadLine());
-// // System.Console.WriteLine("Введите експоненту: ");
-// // int в = Convert.ToInt32(Console.ReadLine());
+// // void PrintResult(int[] power)
+// // {
+// //     for (int i = 0; i < expo; i++ )
+// //     {
+// // 		System.Console.WriteLine($"{Power(basis, expo)}");
+// //     }
+// // }
 
-// int[] myResult = PowerBase(a, b, result);
-// PrintPower(myResult);
+// System.Console.WriteLine("Введите основание: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите експоненту: ");
+// int в = Convert.ToInt32(Console.ReadLine());
 
+// // int[] myResult = Power(basis, expo);
+// // PrintResult(Power(basis, expo));
+// // System.Console.WriteLine(Power(basis, expo));
 
 
 // * Код из примера "Идеального решения"
@@ -95,17 +94,17 @@
 // 82 -> 10
 // 9012 -> 12 
 
-int DigitSum(int num)
-{
-    int sum = 0;
-    while (Math.Abs(num) > 0)
-    {
-        sum += num % 10;  
-        num = num / 10;
-    }
-    return sum;
-}
-System.Console.WriteLine("Imput number: ");
-int num = Convert.ToInt32(Console.ReadLine());
+// int DigitSum(int num)
+// {
+//     int sum = 0;
+//     while (Math.Abs(num) > 0)
+//     {
+//         sum += num % 10;  
+//         num = num / 10;
+//     }
+//     return sum;
+// }
+// System.Console.WriteLine("Imput number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-System.Console.Write($"{DigitSum(num)}");
+// System.Console.Write($"{DigitSum(num)}");
