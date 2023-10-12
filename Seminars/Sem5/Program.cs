@@ -151,24 +151,6 @@
 //     System.Console.WriteLine(); // <- Пустая строка - пропуск в блоке вывода результата на экран
 // }
 
-// // int RequiredNumber(int num, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
-// // {
-// //     int count = 0;
-// //     for (int i = 0; i < array.Length; i++)
-// //     {
-// //         if (array[i] == num)
-// //         {
-// //             System.Console.Write( num[i] + "" );
-// //             count++;
-// //         }
-// //         else
-// //         {
-// //             count++;
-// //         }
-// //     }
-// //     return count; // Возвращаем "count" или "array" ?
-// // }
-
 // bool ExistenceInArray(int num, int[] array)
 // {
 //     for (int i = 0; i < array.Length; i++)
@@ -189,10 +171,10 @@
 
 // int[] myArray = CreateRandomArray(size, minValue, maxValue);
 // PrintArray(myArray);
-// // System.Console.WriteLine(RequiredNumber(num, myArray));
-// // RequiredNumber(num, myArray);
-// // System.Console.WriteLine($"Yes, {num} -> in the array"); // разделить вывод ответов "No" и "Yes"
-// // System.Console.WriteLine($"No {num} -> in the array");
+// // // System.Console.WriteLine(RequiredNumber(num, myArray));
+// // // RequiredNumber(num, myArray);
+// // // System.Console.WriteLine($"Yes, {num} -> in the array"); // разделить вывод ответов "No" и "Yes"
+// // // System.Console.WriteLine($"No {num} -> in the array");
 // System.Console.WriteLine(ExistenceInArray(num, myArray));
 
 
