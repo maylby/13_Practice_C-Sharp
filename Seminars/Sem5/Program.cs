@@ -71,7 +71,9 @@
 
 // 00:25:30
 
-// Задача 4 (из презентации семинара).
+// Задача 2 
+// (№4 - из презентации семинара).
+
 // Задайте одномерный массив из 123 случайных чисел. 
 // Найдите количество элементов массива,
 // значения которых лежат в отрезке [10,99].
@@ -127,7 +129,7 @@
 
 // 00:40:30
 
-// Задача 3.
+// Задача 3.1
 // Задайте массив. 
 // Напишите программу, которая определяет, 
 // присутствует ли заданное число в массиве.
@@ -180,12 +182,12 @@
 
 // 00:53:00
 
-// Задача 3+
-// (Ручной ввод массива, вместо "Random")
-
-// Создайите массив. 
+// Задача 3.2
+// Создайте массив. 
 // Напишите программу, которая определяет, 
 // присутствует ли заданное число в массиве.
+
+// (Ручной ввод чисел массива, вместо "Random")
 
 // int[] CreateUserArray(int size) 
 // {
@@ -234,26 +236,6 @@
 
 //[-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-// Моя попытка решения 'Задачи 2'
-
-// // int[] CreateUserArray(int size) // ручной ввод массива
-// // {
-// //     int[] array1 = new int[size];
-// //     for (int i = 0; i < size; i++)
-// //     {
-// //         Console.Write("Imput element array1: " );
-// //         array1[i] = Convert.ToInt32(Console.ReadLine());
-// //     }
-// //     return array1;
-    
-// //     int[] array2 = new int[size];
-// //     for (int i = 0; i < size; i++)
-// //     {
-// //         Console.Write("Imput element array1: " );
-// //         array1[i] = Convert.ToInt32(Console.ReadLine());
-// //     }
-// //     return array1;
-// // }
 
 // int[] CreateRandomArray(int size, int[] array1, int array2) 
 // {
@@ -278,7 +260,7 @@
 //     System.Console.WriteLine(); // <- Пропуск в блоке вывода результата на экран
 // }
 
-// // !!!- Начало здесь
+// // Начало здесь
 
 // int[] ChangeElements(int[] array1, int[] array2)
 // {
@@ -311,39 +293,39 @@
 
 //[-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-// int[] CreateRandomArray(int size, int minValue, int maxValue) 
-// {
-//     int[] array = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         array[i] = new Random().Next(minValue, maxValue +1);
-//     }
-//     return array;
-// }
-// void PrintArray(int[] array)
-// {
-//     for (int i = 0; i < array.Length; i++ )
-//     {
-//         System.Console.Write( array[i] + " ");
-//     }
-//     System.Console.WriteLine();
-// }    
-// int[] ChangeElements(int[] array)
-// {
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         array[i] = array[i] * (-1);
-//     }
-//     return array;
-// }
-// System.Console.Write("Imput array size: ");
-// int size = Convert.ToInt32(Console.ReadLine());
-// System.Console.Write("Imput minimal value: ");
-// int minValue = Convert.ToInt32(Console.ReadLine());
-// System.Console.Write("Imput maximal value: ");
-// int maxValue = Convert.ToInt32(Console.ReadLine());
+int[] CreateRandomArray(int size, int minValue, int maxValue) 
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(minValue, maxValue +1);
+    }
+    return array;
+}
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++ )
+    {
+        System.Console.Write( array[i] + " ");
+    }
+    System.Console.WriteLine();
+}    
+int[] ChangeElements(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = array[i] * (-1);
+    }
+    return array;
+}
+System.Console.Write("Imput array size: ");
+int size = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Imput minimal value: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Imput maximal value: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
 
-// int[] myArray = CreateRandomArray(size, minValue, maxValue);
-// PrintArray(myArray);
-// PrintArray(ChangeElements(myArray));
+int[] myArray = CreateRandomArray(size, minValue, maxValue);
+PrintArray(myArray);
+PrintArray(ChangeElements(myArray));
 
