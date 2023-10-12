@@ -151,8 +151,12 @@
 // int[] myArray = CreateRandomArray(size, min, max);
 // PrintArray(myArray);
 
+ 
 
-// Архип Чижанов 
+// Задача 1 из семинара 4 (Архип Чижанов)
+// Напишите программу, которая принимает на вход число
+// и выдаёт количество цифр в числе
+
 
 // int[] CreateRandomArray(int size, int minValue, int maxValue)
 // {
