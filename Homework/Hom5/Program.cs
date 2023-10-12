@@ -5,16 +5,16 @@
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-// int[] CreateRandomArray(int size, int minValue, int maxValue) 
-// {
-//     int[] array = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         array[i] = new Random().Next(minValue, maxValue +1);
-// 		if (array[i] > 99 && array[i] < 1000) return array;
-//     }
-//     return array;
-// }
+int[] CreateRandomArray(int size, int minValue, int maxValue) 
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+         array[i] = new Random().Next(minValue, maxValue +1);
+		    if (array[i] > 99 && array[i] < 1000) return array;
+    }
+    return;
+}
 
 // void PrintArray(int[] array)
 // {
@@ -52,21 +52,22 @@
 // [-4, -6, 89, 6] -> 0
 
 
-// int[] SumOddPositions(int[] sum) // "Amount" (cумма) "Odd" (нечет)
-
-// for (int i = 0; i < array.Length; i++ )
+// int SumOddPositions(int[] array)
 // {
-// 	int[] sum = 0;
-// 	if (int i % 2 == 0)
-// 	{
-// 		return i; // (?) "return i" или "return index"?
-// 	}
-// 	else
-// 	{
-// 		sum = sum + array[i];
-// 	}
-// 	return; // (?) "return" или "return i"
+    
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         int sum = 0
+//         if (i % 2 == 0) return i;
+//         else 
+//         {
+//             sum += array[i]
+//         }
+//         return sum;
+//     }
+
 // }
+
 
 
 // Задача 38: 
