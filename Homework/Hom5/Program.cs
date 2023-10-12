@@ -5,43 +5,46 @@
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-int[] CreateRandomArray(int size, int minValue, int maxValue) 
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-         array[i] = new Random().Next(minValue, maxValue +1);
-		    if (array[i] > 99 && array[i] < 1000) return array;
-    }
-    return;
-}
+// int[] CreateRandomArray(int size) 
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next();
+// 		if (array[i] > 99 && array[i] < 1000) return array;
+//     }
+//     return array;
+// }
 
 // void PrintArray(int[] array)
 // {
 //     for (int i = 0; i < array.Length; i++ )
 //     {
-//         System.Console.Write( array[i] + " ");
+//         System.Console.Write(array[i] + " ");
 //     }
 //     System.Console.WriteLine();
 // }  
 
-// int EvenNumberCount(int[] count) // (???)
+// int EvenNumberCount(int[] array) 
 // {
 // 	int count = 0;
-    
 // 	for (int i = 0; i < array.Length; i++ )
 // 	{
-// 		if (array[i]%2 == 0);
+// 		if (array[i]%2 == 0)
 // 		{
-// 			// Куда и как это записать?			
-// 		}
-// 		else
-// 		{
-// 			count++	
+// 			count++;	
 // 		}
 // 	}
-// 	return count;
+//     return count;
 // }
+
+// System.Console.WriteLine("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRandomArray(size);
+// PrintArray(myArray);
+// System.Console.Write($"{EvenNumberCount(myArray)}");
+// // не выводит содержимое массива, выдаёт "System.Int32[]" по количеству злементов
 
 
 
@@ -52,21 +55,6 @@ int[] CreateRandomArray(int size, int minValue, int maxValue)
 // [-4, -6, 89, 6] -> 0
 
 
-// int SumOddPositions(int[] array)
-// {
-    
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         int sum = 0
-//         if (i % 2 == 0) return i;
-//         else 
-//         {
-//             sum += array[i]
-//         }
-//         return sum;
-//     }
-
-// }
 
 
 
