@@ -21,7 +21,7 @@
 
 // System.Console.WriteLine(DigitCount(num));
 
-
+// Задача 2
 // Архип Чижанов 
 // Напишите программу, которая выводит массив из 8 элементов, 
 // заполненный нулями и единицами в случайном порядке.
@@ -30,7 +30,8 @@
 
 // Универсальный метод заполнения массива на основе предложенной задачи
 
-// int[] CreateRandomArray(int size, int minValue, int maxValue) // Квадратные скобки "[]" сообщают, что метод возавращает массив 
+// int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// // Cкобки "[]" перед именем метода сообщают, что метод возвращает массив 
 // {
 //     int[] array = new int[size];
 //     for (int i = 0; i < size; i++)
@@ -55,7 +56,7 @@
 // System.Console.WriteLine("Imput maxsimal value: ");
 // int max = Convert.ToInt32(Console.ReadLine());
 
-// // System.Console.WriteLine(CreateRandomArray(size, min, max)); // Данная конструкция тут не работает
+// // System.Console.WriteLine(CreateRandomArray(size, min, max)); // Данная конструкция не работает
 // int[] myArray = CreateRandomArray(size, min, max);
 // PrintArray(myArray);
 
@@ -71,7 +72,14 @@
 // 4 -> 10
 // 8 -> 36
 
-// int Number (int A)
+// int Prompt(string message)
+// {
+//     Console.WriteLine(message);
+//     int prompt = Convert.ToInt32(Console.ReadLine());
+//     return prompt;
+// }
+
+// int Numbers(int A)
 // {
 //     int sum = 0;
 //     for (int i = 1; i <= A; i++)
@@ -80,35 +88,12 @@
 //     }
 //     return sum;
 // }
+// // System.Console.Write("Input A: "); // Реализация ввода без "Prompt(string message)"
+// // int A = Convert.ToInt32(Console.ReadLine());
+// // System.Console.WriteLine(Number (A)); // Вывод, если нет строки ввода "Prompt(string message)"
 
-// System.Console.Write("Input A: ");
-// int A = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine(Number (A));
-
-
-// Задача 3. 
-// Второй вариант записи 
-
-// int Vvod(string messege)
-// {
-//     Console.WriteLine(messege);
-//     int x = Convert.ToInt32(Console.ReadLine());
-//     return x;
-// }
-
-// int Number (int A)
-// {
-//     int sum = 0;
-//     for (int i = 1; i <= A; i++)
-//     {
-//         sum = sum += i;
-//     }
-//     return sum;
-// }
-
-
-// int A = Vvod("Input A: ");
-// System.Console.WriteLine(Number (A));
+// int A = Prompt("Imput A: "); // Ввод при наличии строки ввода "Prompt(string message)"
+// Console.WriteLine(Numbers(A)); // Вывод для "Prompt(string message)" - строка ввода
 
 
 
@@ -119,16 +104,27 @@
 // 4 -> 24
 // 5 -> 120
 
-// int Number (int N)
+// int Prompt(string message)
 // {
-//     int prod = 1;
-//     for (int i = 1; i <= N; i++)
-//     {
-//         prod = prod * i;
-//     }
-//     return prod;
+//     Console.WriteLine(message);
+//     int prompt = Convert.ToInt32(Console.ReadLine());
+//     return prompt;
 // }
 
-// System.Console.Write("Input N: ");
-// int N = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine(Number (N));
+// int Factorial(int num)
+// {
+//     int factorial = 1;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         factorial *= i; // factorial = factorial * i;
+//     }
+//     return factorial;
+// }
+
+// System.Console.Write("Input number: "); // Ввод, если нет строки ввода "Prompt(string message)"
+// int num = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine(Factorial(num)); // Вывод, если нет "Prompt(string message)"
+
+// int num = Prompt("Imput number: "); // Ввод при наличии строки ввода "Prompt(string message)"
+// Console.WriteLine(Factorial(num)); // Вывод со строкой ввода "Prompt(string message)"
+

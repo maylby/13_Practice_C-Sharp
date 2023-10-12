@@ -6,40 +6,46 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+// * error CS5001: Программа не содержит статического метода "Main", подходящего для точки входа.
+// * Активировал метод "Main" (см. код ниже). Стало хуже, чем было.
+
+// class Main
+// {
+//     static public void main (string[] args)
+//     {
+//         System.Console.WriteLine();
+//     }
+// }
+
+
 // int Power(int basis, int expo)
 // {
 // 	int power = 1;
 // 	for (int i = 0; i < expo; i++)
 // 	{
-// 		power = power * basis;
+// 		power = basis * basis;
 // 	}
 // 	return power;
 // }
 
-// bool ErrorExponent(int expo)
+// bool ErrorExponente(int expo)
 // {
 // 	   if (expo < 0)
 //     {
-// 		Console.WriteLine("Експонент - не меньше нуля");
+// 		Console.WriteLine("Экспонент - не меньше нуля");
+//         return false;
 //     }
 //     return true;
 // }	
 
-// // void PrintResult(int[] power)
-// // {
-// //     for (int i = 0; i < expo; i++ )
-// //     {
-// // 		System.Console.WriteLine($"{Power(basis, expo)}");
-// //     }
-// // }
+// void PrintPower(int[] basis)
+// {
+//     for (int i = 0; i < expo; i++ ) // Что означает фраза: "Нвозможно использовать локальную переменную "expo" до ее объявления"?
+//     {
+// 		System.Console.WriteLine(Power(basis, expo)); // Как "объявить" переменную "expo"?
+//     }
+// }
 
-// System.Console.WriteLine("Введите основание: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine("Введите експоненту: ");
-// int в = Convert.ToInt32(Console.ReadLine());
-
-// // int[] myResult = Power(basis, expo);
-// // PrintResult(Power(basis, expo));
 // // System.Console.WriteLine(Power(basis, expo));
 
 
@@ -108,3 +114,72 @@
 // int num = Convert.ToInt32(Console.ReadLine());
 
 // System.Console.Write($"{DigitSum(num)}");
+
+
+// Задача 29: 
+// Напишите программу, которая задаёт массив из 8 элементов 
+// и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// {
+//     int[] array = new int[size]; 
+//     for (int i = 0; i < size; i++) 
+//     {
+//         array[i] = new Random().Next(minValue, maxValue +1); 
+	 
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++ )
+//     {
+//         System.Console.Write( array[i] + " ");
+//     }
+// }
+
+// System.Console.WriteLine("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput minimal value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput maxsimal value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRandomArray(size, min, max);
+// PrintArray(myArray);
+
+
+// Архип Чижанов 
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+// int[] array = new int[size];
+
+// for (int i = 0; i < size; i++)
+// {
+// array[i] = new Random().Next(minValue, maxValue + 1);
+// }
+
+// return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+// for (int i = 0; i < array.Length; i++)
+// {
+// System.Console.Write( array[i] + " " );
+// }
+// }
+
+// System.Console.WriteLine("Input array size: " );
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Input minimal value: " );
+// int min = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Input maximal value: " );
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRandomArray(size, min, max);
+// PrintArray(myArray);
