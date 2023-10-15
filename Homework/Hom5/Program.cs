@@ -10,46 +10,50 @@
 // [345, 897, 568, 234] -> 2
 
 
-int[] Random3DArray(int array, int size) 
+// Выводит число чётных элементов массива,
+// но, вместо значений массива, 
+// показывает "System.Int32[]" по количеству чисел в массиве.
+
+int[] CreateRandomArray(int size) 
 {
     int[] array = new int[size];
     for (int i = 0; i < size; i++)
     {
-	    if (array[i] > 99 && array[i] < 1000)        
-	    {
-		    array[i] = new Random().Next(array);
-	    }
-	    // else return; // (???)
+        array[i] = new Random().Next();
+		if (array[i] > 99 && array[i] < 1000) return array;
     }
-    return array; // (???)
+    return array;
 }
 
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++ )
+    {
+        System.Console.Write(array + " ");
+    }
+    System.Console.WriteLine();
+}  
 
-// void PrintCount(int[] array)
-// {
-// 	for (int i = 0; i < array.Length; i++ )
-// 	{
-// 		Console.WriteLine(array);
-// 	}
-// 	Console.WriteLine();
-// }
 
+int EvenNumberCount(int[] array) 
+{
+	int count = 0;
+	for (int i = 0; i < array.Length; i++ )
+	{
+		if (array[i]%2 == 0)
+		{
+			count++;	
+		}
+	}
+    return count;
+}
 
-// int Number3DEven(int[] count, int[] array)
+System.Console.WriteLine("Imput array size: ");
+int size = Convert.ToInt32(Console.ReadLine());
 
-// for (int i = 0; i < array.Length; i++)
-// {
-// 	if (array[i]%2 = 0) return count;
-// }
-// return count;
-
-// Console.WriteLine($"[{array}] -> {count}");
-
-// System.Console.WriteLine("Imput array size: ");
-// int size = Convert.ToInt32(Console.ReadLine());
-
-// int[] myArray = Number3DEven(array, count);
-// PrintCount(myArray);
+int[] myArray = CreateRandomArray(size);
+PrintArray(myArray);
+System.Console.WriteLine($"{EvenNumberCount(myArray)}");
 
 
 // Задача 36: 

@@ -80,52 +80,55 @@
 
 // Универсальный код для создания произвольного массива пользователем.
 
-// int[] CreateRandomArray(int size, int minValue, int maxValue) 
-// {
-//     int[] array = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         array[i] = new Random().Next(minValue, maxValue +1);
-//     }
-//     return array;
-// }
+int[] CreateRandomArray(int size, int minValue, int maxValue) 
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(minValue, maxValue +1);
+    }
+    return array;
+}
 
-// void PrintArray(int[] array)
-// {
-//     for (int i = 0; i < array.Length; i++ )
-//     {
-//         System.Console.Write( array[i] + " ");
-//     }
-//     System.Console.WriteLine(); // <- Пустая строка - пропуск в блоке вывода результата на экран
-// }
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++ )
+    {
+        System.Console.Write( array[i] + " ");
+    }
+    System.Console.WriteLine(); // <- Пустая строка - пропуск в блоке вывода результата на экран
+}
 
-// int QuantityInTheSegments(int max, int min, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
-// {
-//     int count = 0;
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         if (array[i] <= max && array[i] >= min)
-//         {
-//             count++;
-//         }
-//     }
-//     return count;
-// }
+int QuantityInTheSegments(int max, int min, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] <= max && array[i] >= min)
+        {
+            count++;
+        }
+    }
+    return count;
+}
 
-// System.Console.WriteLine("Imput array size: ");
-// int size = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine("Imput minimal value: ");
-// int minValue = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine("Imput maximal value: ");
-// int maxValue = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine("Imput lower border value: ");
-// int min = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine("Imput upper border value: ");
-// int max = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Imput array size: ");
+int size = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Imput minimal value: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Imput maximal value: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Imput lower border value: ");
+int min = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Imput upper border value: ");
+int max = Convert.ToInt32(Console.ReadLine());
 
-// int[] myArray = CreateRandomArray(size, minValue, maxValue);
-// PrintArray(myArray);
-// System.Console.WriteLine(QuantityInTheSegments(min, max, myArray));
+int[] myArray = CreateRandomArray(size, minValue, maxValue);
+PrintArray(myArray); 
+// Метод "void PrintArray" (невозвращающий) не может передать данные в "Console.WriteLine();"
+System.Console.WriteLine(QuantityInTheSegments(min, max, myArray)); 
+// Метод "int QuantityInTheSegments" (возвращающий) может передать данные в "Console.Write();"
+
 
 // 00:40:30
 
@@ -293,39 +296,39 @@
 
 //[-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-int[] CreateRandomArray(int size, int minValue, int maxValue) 
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().Next(minValue, maxValue +1);
-    }
-    return array;
-}
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++ )
-    {
-        System.Console.Write( array[i] + " ");
-    }
-    System.Console.WriteLine();
-}    
-int[] ChangeElements(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = array[i] * (-1);
-    }
-    return array;
-}
-System.Console.Write("Imput array size: ");
-int size = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Imput minimal value: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Imput maximal value: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
+// int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue +1);
+//     }
+//     return array;
+// }
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++ )
+//     {
+//         System.Console.Write( array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }    
+// int[] ChangeElements(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = array[i] * (-1);
+//     }
+//     return array;
+// }
+// System.Console.Write("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Imput minimal value: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Imput maximal value: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
 
-int[] myArray = CreateRandomArray(size, minValue, maxValue);
-PrintArray(myArray);
-PrintArray(ChangeElements(myArray));
+// int[] myArray = CreateRandomArray(size, minValue, maxValue);
+// PrintArray(myArray);
+// PrintArray(ChangeElements(myArray));
 
