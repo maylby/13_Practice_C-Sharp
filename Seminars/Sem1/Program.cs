@@ -16,12 +16,28 @@
 // Задача 1(зал)
 // Напишите программу, которая на вход принимает число и выдаёт его квадрат
 
-System.Console.Write("Input N: ");
-int num = Convert.ToInt32(Console.ReadLine());
-System.Console.Write($"Square of the number {num} = {num*num}");
+// System.Console.Write("Input N: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write($"Square of the number {num} = {num*num}");
 
 // Видео на странице Семинара 1 на сайте GeekBrains: <https://gb.ru/lessons/362978>
 // 00:10:20 (???)
+
+
+// System.Console.Write("Input number A: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Input number B: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+
+// if (num1 == num2*num2)
+// {
+//     System.Console.Write($"a = {num1}; b = {num2} -> Yes ");
+// }
+// else
+// {
+//     System.Console.Write($"a = {num1}; b = {num2} -> No ");
+// }
+
 
 // Задача 1
 
