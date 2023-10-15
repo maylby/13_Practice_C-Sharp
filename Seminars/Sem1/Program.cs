@@ -23,6 +23,9 @@
 // Видео на странице Семинара 1 на сайте GeekBrains: <https://gb.ru/lessons/362978>
 // 00:10:20 (???)
 
+// Задача 2
+// Напишите программу, которая на вход принимает два числа
+// и проверяет является ли первое квадратом второго
 
 // System.Console.Write("Input number A: ");
 // int num1 = Convert.ToInt32(Console.ReadLine());
