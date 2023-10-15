@@ -1,51 +1,55 @@
 ﻿// Практичечкая работа 5 по семинару "Функции и одномерные массивы"
 
+// Знакомство с языками программирования (семинары)
+
+// Урок 5. Функции и одномерные массивы
+
 // Задача 34: 
 // Задайте массив заполненный случайными положительными трёхзначными числами. 
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-// int[] CreateRandomArray(int size) 
-// {
-//     int[] array = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         array[i] = new Random().Next();
-// 		if (array[i] > 99 && array[i] < 1000) return array;
-//     }
-//     return array;
-// }
 
-// void PrintArray(int[] array)
-// {
-//     for (int i = 0; i < array.Length; i++ )
-//     {
-//         System.Console.Write(array[i] + " ");
-//     }
-//     System.Console.WriteLine();
-// }  
+int[] Random3DArray(int array, int size) 
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+	    if (array[i] > 99 && array[i] < 1000)        
+	    {
+		    array[i] = new Random().Next(array);
+	    }
+	    // else return; // (???)
+    }
+    return array; // (???)
+}
 
-// int EvenNumberCount(int[] array) 
+
+// void PrintCount(int[] array)
 // {
-// 	int count = 0;
 // 	for (int i = 0; i < array.Length; i++ )
 // 	{
-// 		if (array[i]%2 == 0)
-// 		{
-// 			count++;	
-// 		}
+// 		Console.WriteLine(array);
 // 	}
-//     return count;
+// 	Console.WriteLine();
 // }
+
+
+// int Number3DEven(int[] count, int[] array)
+
+// for (int i = 0; i < array.Length; i++)
+// {
+// 	if (array[i]%2 = 0) return count;
+// }
+// return count;
+
+// Console.WriteLine($"[{array}] -> {count}");
 
 // System.Console.WriteLine("Imput array size: ");
 // int size = Convert.ToInt32(Console.ReadLine());
 
-// int[] myArray = CreateRandomArray(size);
-// PrintArray(myArray);
-// System.Console.Write($"{EvenNumberCount(myArray)}");
-// // не выводит содержимое массива, выдаёт "System.Int32[]" по количеству злементов
-
+// int[] myArray = Number3DEven(array, count);
+// PrintCount(myArray);
 
 
 // Задача 36: 
