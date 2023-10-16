@@ -62,46 +62,50 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-int[] CreateRandomArray(int size, int minValue, int maxValue) 
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().Next(minValue, maxValue +1);
-    }
-    return array;
-}
+// int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue +1);
+//     }
+//     return array;
+// }
 
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++ )
-    {
-        System.Console.Write( array[i] + " ");
-    }
-    System.Console.WriteLine(); // <- Пустая строка - разделитель
-}
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++ )
+//     {
+//         System.Console.Write( array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
 
-void SumOddPositions(int[] array)
+// void SumOddPositions(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         int sum = 0;
+//         if (i % 2 == 0) return; 
+//         else 
+//         {
+//             sum += array[i];
+//         }
+//         return;
+//     }
+// }
 
-for (int i = 0; i < array.Length; i++ )
-{
-	int sum = 0;
-	if (i % 2 == 0) return i; 
-	else renurn sum += array[i];
-}
-System.Console.WriteLine($"Sum odd array elements -> {sum}");
+// System.Console.WriteLine("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput minimal value: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput maxsimal value: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine("Imput array size: ");
-int size = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Imput minimal value: ");
-int min = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Imput maxsimal value: ");
-int max = Convert.ToInt32(Console.ReadLine());
-
-int[] myArray = CreateRandomArray(size, min, max);
-PrintArray(myArray);
-SumOddPositions(myArray);
-
+// int[] myArray = CreateRandomArray(size, minValue, maxValue);
+// PrintArray(myArray);
+// SumOddPositions(myArray);
+// System.Console.WriteLine($"{myArray}");
 
 
 // Задача 38: 
