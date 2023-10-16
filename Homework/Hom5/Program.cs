@@ -19,8 +19,10 @@
 //     int[] array = new int[size];
 //     for (int i = 0; i < size; i++)
 //     {
-//         array[i] = new Random().Next();
-// 		if (array[i] > 99 && array[i] < 1000) return array;
+// 		if (array[i] > 99 && array[i] < 1000)
+//         {
+//             array[i] = new Random().Next();
+//         }    
 //     }
 //     return array;
 // }
@@ -83,6 +85,7 @@
 
 // void SumOddPositions(int[] array)
 // {
+    
 //     for (int i = 0; i < array.Length; i++)
 //     {
 //         int sum = 0;
@@ -105,7 +108,7 @@
 // int[] myArray = CreateRandomArray(size, minValue, maxValue);
 // PrintArray(myArray);
 // SumOddPositions(myArray);
-// System.Console.WriteLine($"{myArray}");
+// System.Console.WriteLine(myArray);
 
 
 // Задача 38: 
@@ -113,12 +116,10 @@
 // Найдите разницу между максимальным и минимальным элементов массива.
 // [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
-// NB (Чижов Архип):
 // Random.NextDouble() - возвращает дробную часть числа, значение после запятой
 // Random.Next() - возвращает целую часть числа от 0 до 9
 // Складывая эти методы получим вещественное число (10,001 и пр.)
 
-// Написать программу (см. конспекты предыдущих уроков):
 
 // Алгоритм 
 // поиск минимума и максимума: 
@@ -126,3 +127,59 @@
 // if (array[i] < min) min = array[i]; // (?)
 // Вычетаем минимум из максимума 
 // Печатаем: max - min = diff
+
+
+// double[] CreateRandomArray(int size, double minValue, double maxValue) 
+// {
+//     double[] array = [minValue, maxValue];
+//     for (int i = 0; i < size; i++)
+//     {
+// 	    if (array[i] > 1) 
+// 	    {
+// 		    array[i] = new Random().Next(minValue, maxValue);
+// 	    }
+// 	    else
+// 	    {
+// 		    array[i] = new Random().NextDouble(minValue, maxValue);
+// 	    }
+// 	return array;
+//     }
+//     array = array[size] + array[size];
+// }
+
+// void PrintArray(double[] array)
+// {
+//     for (int i = 0; i < array.Length; i++ )
+//     {
+//         System.Console.Write( array[i] + " ");
+//     }
+//     System.Console.WriteLine(); 
+// }
+
+// double DifferenceMinMax(double[] array, double max, double min) // Нужны ли скобки "[]" после "double"? 
+// // (?) "void" или "double" // Что означают скобки после типа данных? Содержимое приходит извне?
+// {
+//     double diff;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+        
+//         array[i] = min;
+// 	    if (array[i] < min) return min;
+//         array[i] = max;
+// 	    if (array[i] > max) return max;
+//         return array[i];
+//     }
+//     diff = max - min; 
+// }
+// // System.Console.WriteLine($"Difference {max} {min} -> {diff}");
+
+// System.Console.WriteLine("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput minimal value: ");
+// double minValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput maxsimal value: ");
+// double maxValue = Convert.ToInt32(Console.ReadLine());
+
+// double[] myArray = CreateRandomArray(size, minValue, maxValue);
+// PrintArray(myArray);
+// System.Console.WriteLine($"{DifferenceMinMax(array, max, min)}");
