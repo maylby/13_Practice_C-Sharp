@@ -77,20 +77,26 @@
 // и выдаёт таблицу квадратов чисел от 1 до N.
 // 5 -> 1, 4, 9, 16, 25
 
-void Kvadrats(int n)
-{
-	int index = 1;
-	while (index <= n)
-	{
-		System.Console.Write($"{index * index}, ");
-		index++;
-	}
-}
-System.Console.Write("Input number: ");
-int num = Convert.ToInt32(Console.ReadLine());
-Kvadrats(num);
+// void Kvadrats(int n)
+// {
+// 	int index = 1;
+// 	while (index <= n)
+// 	{
+// 		System.Console.Write($"{index * index}, ");
+// 		index++;
+// 	}
+// }
+// System.Console.Write("Input number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Kvadrats(num);
 
 
+// 00:49:00
+
+// Задача 4
+// Напишите программу, которая принимает на вход координаты точки
+// (X и Y), причём X=0 и Y=0 и выдаёт номер четверти плоскости,
+// в которой находится точка.
 
 // int Vvod(string message)
 // {
