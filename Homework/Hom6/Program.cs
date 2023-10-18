@@ -74,3 +74,42 @@
 // значения b1, k1, b2 и k2 задаются пользователем.
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+// double[] FindPointCross(double[] line1, double[] line2)
+// {
+//     double[] coord = new double[];
+//     coord[x] = (b2 - b1)/(k1 - k2);
+//     coord[y] = k1*x + b1;
+//     return coord;
+// }
+
+// bool CheckLines(double[] line1, double[] line2)
+// {
+//     if (b1 == b2)
+//     {
+//         if(k1 == k2)
+//         {
+//             Console.WriteLine("Прямые совпадают");
+//             return false;
+//         }
+//         else
+//         {
+//             Console.WriteLine("Прямые параллельны");
+//             return false; 
+//         }
+//     }
+//     return true;
+// }
+
+// System.Console.Write("Input value b1: ");
+// double b1 = Convert.ToDouble(Console.ReadLine());
+// System.Console.Write("Input value k1: ");
+// double k1 = Convert.ToDouble(Console.ReadLine());
+// System.Console.Write("Input value b2: ");
+// double b2 = Convert.ToDouble(Console.ReadLine());
+// System.Console.Write("Input value k2: ");
+// double k2 = Convert.ToDouble(Console.ReadLine());
+
+// double myLine = FindPointCross(line1, line2);
+// CheckLines(myLine);
+// System.Console.Write($"({b1}, {k1}); ({b2}, {k2}) -> {FindPointCross(line1, line2)}");
