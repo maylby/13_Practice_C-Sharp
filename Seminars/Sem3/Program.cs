@@ -77,15 +77,20 @@
 // и выдаёт таблицу квадратов чисел от 1 до N.
 // 5 -> 1, 4, 9, 16, 25
 
-// void Kvadrats(int N)
-// {
-// 	int index = 1;
-// 	while (index <= N)
-// 	{
-// 		System.Console.Write($"{index * index}, ");
-// 		index++;
-// 	}
-// }
+void Kvadrats(int n)
+{
+	int index = 1;
+	while (index <= n)
+	{
+		System.Console.Write($"{index * index}, ");
+		index++;
+	}
+}
+System.Console.Write("Input number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Kvadrats(num);
+
+
 
 // int Vvod(string message)
 // {
