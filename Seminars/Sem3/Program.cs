@@ -45,6 +45,9 @@
 // Написать программу, которая на входе принимает координаты точек и  
 // на выходе выдаёт расстояние между ними.
 
+// A (3,6); B (2,1) -> 5,09
+// A (7,-5); B (1,-1) -> 7,21
+
 // double FindDistance(double xa, double ya, double xb, double yb)
 // {
 // 	return Math.Round(Math.Sqrt(Math.Pow(xa - xb ,2) + Math.Pow(ya - yb ,2)), 2);
@@ -63,6 +66,7 @@
 // double yb = Convert.ToInt32(Console.ReadLine());
 
 // System.Console.Write($"A({xa}, {ya}); B({xb}, {yb}) -> {FindDistance(xa, ya, xb, yb)}");
+
 
 // 00:35:50
 // Студенты
