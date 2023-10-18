@@ -6,50 +6,62 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-// * error CS5001: Программа не содержит статического метода "Main", подходящего для точки входа.
-// * Активировал метод "Main" (см. код ниже). Стало хуже, чем было.
+// // // * Вариант 1, решение со "string message", как в примере к ДЗ
+// // // ** Начало кода
 
-// class Main
-// {
-//     static public void main (string[] args)
-//     {
-//         System.Console.WriteLine();
-//     }
-// }
+// // int Enter(string message)
+// // {
+// //     System.Console.Write(message);
+// //     string readImput = System.Console.ReadLine();
+// //     int result = int.Parse(readImput);
+// //     return result;
+// // }
 
+// // // * Вариант 2, решения с "Convert.ToInt32"
+// // // ** Начало кода
 
-// int Power(int basis, int expo)
+// int Power(int basis, int exponent)
 // {
 // 	int power = 1;
-// 	for (int i = 0; i < expo; i++)
+// 	for (int i = 0; i < exponent; i++)
 // 	{
-// 		power = basis * basis;
+// 		power *= basis; // либо -> power = power * basis;
 // 	}
 // 	return power;
 // }
 
-// bool ErrorExponente(int expo)
+// bool ErrorExponent(int exponent)
 // {
-// 	   if (expo < 0)
+//     if (exponent < 0)
 //     {
 // 		Console.WriteLine("Экспонент - не меньше нуля");
 //         return false;
 //     }
 //     return true;
-// }	
-
-// void PrintPower(int[] basis)
-// {
-//     for (int i = 0; i < expo; i++ ) // Что означает фраза: "Нвозможно использовать локальную переменную "expo" до ее объявления"?
-//     {
-// 		System.Console.WriteLine(Power(basis, expo)); // Как "объявить" переменную "expo"?
-//     }
 // }
 
-// // System.Console.WriteLine(Power(basis, expo));
+// // // ** Консоль "Вход/Выход" для Варианта 2 ("Convert.ToInt32"):
+
+// Console.Write("Введите основание: ");
+// int basis = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите экспонен: ");
+// int exponent = Convert.ToInt32(Console.ReadLine());
+// int myPower = Power(basis, exponent);
+// ErrorExponent(myPower);
+// Console.WriteLine($"{basis}, {exponent} -> {Power(basis, exponent)}");
+
+// // // ** Консоль "Вход/Выход" для Варианта 1 ("string message"):
+
+// // int basis = Enter("Введите основание: ");
+// // int exponent = Enter("Введите экспонен: ");
+// // if (ErrorExponent(exponent))
+// // {
+// //     Console.WriteLine($"{basis}, {exponent} -> {Power(basis, exponent)}");
+// // }
 
 
-// * Код из примера "Идеального решения"
+
+// * Код Задачи 25 из "примера идеального решения"
 
 // using System.Xml.XPath;
 
@@ -128,7 +140,6 @@
 //     for (int i = 0; i < size; i++) 
 //     {
 //         array[i] = new Random().Next(minValue, maxValue +1); 
-	 
 //     }
 //     return array;
 // }
