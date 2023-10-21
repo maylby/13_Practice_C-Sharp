@@ -52,10 +52,14 @@
 //     }
 //     System.Console.WriteLine($"Sum of positivSum arrau elements -> {positivSum} \nSum of negativSum arrau elements -> {negativSum}");
 
+//     // Для компактности записи, чтобы видеть всю строку кода, её делят на части:
 //     // Значок "\n" разделяет две разных записи в одной строке, а
-//     // значок "+" (плюс) связывает текст в единый блок, в случае переноса части текста на другую строку. 
-//     // Выше стоящюю конструкцию не удалось разделить на части и перенести на другую строку описанным способом. 
-//     // Можно записать, только отдельной строкой в конструкции "System.Console.WriteLine($"... -> {}");"
+//     // значок "+" (плюс) связывает текст в единый блок, 
+//     // добавляя перенесённый кусок к предыдущей записи.
+//     // Выше приведенную конструкцию ("Console.WriteLine"), в VSCode,
+//     // не удалось разделить на части и перенести на другую строку описанным способом. 
+//     // Две записи удалось разделить, только поместив каждую в отдельную команду, 
+//     // в конструкции "System.Console.WriteLine($"... -> {}");"
 //     // Для примера оформления, оставил запись в одну строку.
 // }
 
@@ -83,6 +87,8 @@
 // Универсальный код для создания произвольного массива пользователем.
 
 // int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// // "size" - количество элементов массива, 
+// // "minValue" и "maxValue" - минимальное и максимальное значение
 // {
 //     int[] array = new int[size];
 //     for (int i = 0; i < size; i++)
@@ -101,7 +107,9 @@
 //     System.Console.WriteLine(); // <- Пустая строка - пропуск в блоке вывода результата на экран
 // }
 
-// int QuantityInTheSegments(int max, int min, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
+// int QuantityInTheSegments(int min, int max, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
+// //  "int max" и "int min" - границы промежутка, которые будут запрашиваться у пользователя
+// // "int[] array" - указание на то, что методу будет передаваться массив ("[]")
 // {
 //     int count = 0;
 //     for (int i = 0; i < array.Length; i++)
@@ -127,9 +135,20 @@
 
 // int[] myArray = CreateRandomArray(size, minValue, maxValue);
 // PrintArray(myArray); 
-// Метод "void PrintArray" (невозвращающий) не может передать данные в "Console.WriteLine();"
-// System.Console.WriteLine(QuantityInTheSegments(min, max, myArray)); 
-// Метод "int QuantityInTheSegments" (возвращающий) может передать данные в "Console.Write();"
+// // Метод "void PrintArray" (невозвращающий) не может передать данные в "Console.WriteLine();"
+// // System.Console.WriteLine(QuantityInTheSegments(min, max, myArray)); 
+// // Метод "int QuantityInTheSegments" (возвращающий) может передать данные в "Console.Write();"
+
+// // QuantityInTheSegments(max, min, myArray); // <- так можно обратиться, только к методу "void"
+// // подобное обращение не выводит на экран значение "count", количество чисел из заданного промежутка,
+// // так как "count" вычислялся именно этим методом, а его значения не переданы для вывода.
+// // Чтобы это исправить, следует, либо создать переменную, передав ей данные метода, 
+// // и уже саму переменную передать в "Console.WriteLine",
+// // либо прямо передать метод "QuantityInTheSegments(...)" сразу в "Console.WriteLine" (см. ниже)
+
+// System.Console.WriteLine(QuantityInTheSegments(min, max, myArray));
+// // "max, min" - данные, переданные пользователем в "QuantityInTheSegments"
+// // "myArray" - массив, сформированный в "CreateRandomArray" и переданный в "QuantityInTheSegments"
 
 
 // 00:40:30
