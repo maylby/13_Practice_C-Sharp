@@ -30,7 +30,9 @@
 //     {
 //         System.Console.Write( array[i] + " ");
 //     }
-//     System.Console.WriteLine(); // <- Пустая строка в блоке вывода на экран, для удобства чтения
+//     System.Console.WriteLine(); 
+//     // Пустая строка в блоке вывода на экран, создана для удобства чтения 
+//     // двойной строки в "FindMinMaxSum", при выводе даннгой строки на экран 
 // }
 
 // void FindMinMaxSum(int[] array)
@@ -64,9 +66,9 @@
 // System.Console.WriteLine("Imput maxsimal value: ");
 // int max = Convert.ToInt32(Console.ReadLine());
 
-// int[] myArray = CreateRandomArray(size, min, max);
-// PrintArray(myArray);
-// FindMinMaxSum(myArray);
+// int[] myArray = CreateRandomArray(size, min, max); // Передача значений в "myArray" для компактности 
+// PrintArray(myArray); // Вызов метода вывода на экран данных, переданных в "myArray" строкой выше 
+// FindMinMaxSum(myArray); // передача методу данных "myArray" для обработки и вывода на экран 
 
 
 // 00:25:30
@@ -80,53 +82,53 @@
 
 // Универсальный код для создания произвольного массива пользователем.
 
-int[] CreateRandomArray(int size, int minValue, int maxValue) 
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().Next(minValue, maxValue +1);
-    }
-    return array;
-}
+// int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue +1);
+//     }
+//     return array;
+// }
 
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++ )
-    {
-        System.Console.Write( array[i] + " ");
-    }
-    System.Console.WriteLine(); // <- Пустая строка - пропуск в блоке вывода результата на экран
-}
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++ )
+//     {
+//         System.Console.Write( array[i] + " ");
+//     }
+//     System.Console.WriteLine(); // <- Пустая строка - пропуск в блоке вывода результата на экран
+// }
 
-int QuantityInTheSegments(int max, int min, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
-{
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] <= max && array[i] >= min)
-        {
-            count++;
-        }
-    }
-    return count;
-}
+// int QuantityInTheSegments(int max, int min, int[] array) // <- название массива произвольно, но передаёт принцип его работы 
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] <= max && array[i] >= min)
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
 
-System.Console.WriteLine("Imput array size: ");
-int size = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Imput minimal value: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Imput maximal value: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Imput lower border value: ");
-int min = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Imput upper border value: ");
-int max = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput minimal value: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput maximal value: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput lower border value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Imput upper border value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
 
-int[] myArray = CreateRandomArray(size, minValue, maxValue);
-PrintArray(myArray); 
+// int[] myArray = CreateRandomArray(size, minValue, maxValue);
+// PrintArray(myArray); 
 // Метод "void PrintArray" (невозвращающий) не может передать данные в "Console.WriteLine();"
-System.Console.WriteLine(QuantityInTheSegments(min, max, myArray)); 
+// System.Console.WriteLine(QuantityInTheSegments(min, max, myArray)); 
 // Метод "int QuantityInTheSegments" (возвращающий) может передать данные в "Console.Write();"
 
 
