@@ -83,32 +83,26 @@
 //     System.Console.WriteLine();
 // }
 
-// void SumOddPositions(int[] array)
+// int SumOddPositions(int[] array)
 // {
-    
+//     int sum = 0;
 //     for (int i = 0; i < array.Length; i++)
 //     {
-//         int sum = 0;
-//         if (i % 2 == 0) return; 
-//         else 
-//         {
-//             sum += array[i];
-//         }
-//         return;
+//         if (i % 2 > 0) sum += array[i];
 //     }
+//     return sum;
 // }
 
-// System.Console.WriteLine("Imput array size: ");
+// System.Console.Write("Imput array size: ");
 // int size = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine("Imput minimal value: ");
+// System.Console.Write("Imput minimal value: ");
 // int minValue = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine("Imput maxsimal value: ");
+// System.Console.Write("Imput maxsimal value: ");
 // int maxValue = Convert.ToInt32(Console.ReadLine());
 
 // int[] myArray = CreateRandomArray(size, minValue, maxValue);
 // PrintArray(myArray);
-// SumOddPositions(myArray);
-// System.Console.WriteLine(myArray);
+// System.Console.WriteLine($"{SumOddPositions(myArray)}");
 
 
 // Задача 38: 
@@ -131,20 +125,20 @@
 
 // double[] CreateRandomArray(int size, double minValue, double maxValue) 
 // {
-//     double[] array = [minValue, maxValue];
+//     double[] array = new double[size];
 //     for (int i = 0; i < size; i++)
 //     {
-// 	    if (array[i] > 1) 
-// 	    {
-// 		    array[i] = new Random().Next(minValue, maxValue);
-// 	    }
-// 	    else
-// 	    {
-// 		    array[i] = new Random().NextDouble(minValue, maxValue);
-// 	    }
+// 	    // if (array[i] > 1) 
+// 	    // {
+// 		array[i] = new Random().Next(minValue, maxValue +1) + new Random().NextDouble(minValue, maxValue +1);
+// 	    // }
+// 	    // else
+// 	    // {
+// 		//     array[i] = new Random().NextDouble(minValue, maxValue +1);
+// 	    // }
+//     }    
 // 	return array;
-//     }
-//     array = array[size] + array[size];
+    
 // }
 
 // void PrintArray(double[] array)
