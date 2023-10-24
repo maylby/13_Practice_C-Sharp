@@ -61,6 +61,7 @@
 // ---------------------------------------
 
 // // 00:27:40
+// // Задача 42
 // // Преобразование десятичного числа в двоичное
 
 // // 45 -> 101101
@@ -77,15 +78,17 @@
 // // 27/2=13(+1) > 1 > 13/2=6(+1) > 1 > 6/2=3(+0) > 0 > 3/2=1(+1) > 1 > 1/2=0,5(+1) > 1
 // // Итого: 11011 = 16+8+0+2+1 = 27 (|16|8|4|2|1|)
 // // 28/2=14(+0) > 0 > 14/2=7(0) > 0 > 7/2=3(+1) > 1 > 3/2=1(+1) > 1 > 1/2=0,5(+1) > 1
-// // Итого: 00111 -> 11100 = 16+8+4+0+0 = 28
+// // Итого: 28 -> 00111 -> 11100 (переворот) = 16+8+4+0+0 = 28
 
-// string DecimalToBinary(int num)
+// string DecimalToBinary(int num) // "string" - строка, метод возвращает строку
 // {
 // 	string result = string.Empty; // Пустая ("Empty") строка, т.е. "result" = 0
 // 	while (num > 0)
 // 	{
-// 		result = num % 2 + result;
-// 		num /= 2; // Сокращенная запись: "num = num / 2"
+// 		result = num % 2 + result; // способ записи строки в обратном порядке
+//         // "num%2" ставим пред "result", получаем запись остатка справа от предыдущего числа
+		
+//         num /= 2; // Сокращенная запись: "num = num / 2"
 // 	}
 // 	return result;
 // }
@@ -96,7 +99,7 @@
 
 // // 00:39:00
 
-// // Задача 1 (зал /Илья Канаев/)
+// // Задача 40 /Илья Канаев/
 // // Написать программу принимающую на вход три числа,
 // // и определяющую, существует ли треугольник со сторонами такой длины
 
@@ -115,6 +118,7 @@
 // int c = Convert.ToInt32(Console.ReadLine());
 
 // System.Console.WriteLine(TriangleSides(a, b, c)); // "return" возвращает "true"/"false"
+
 
 // 00:53:00
 
@@ -141,6 +145,7 @@
 //         Console.Write("Imput N: ");
 //         int n = Convert.ToInt32(Console.ReadLine());
 //         int[] fibonachi = new int[n];
+//         Console.Write($"Если N = {n} -> ");
 //         PrintArray(Fibonachi(fibonachi));
 //     }
 //     public static int[] Fibonachi(int[] fibonachi)
@@ -173,3 +178,43 @@
 //     }
 // }
 
+
+// // Вариант 2 (другая запись решения задачи 44 /Числа Фибоначи/)
+
+// int[] Fibonachi(int[] fibonachi)
+// {
+//     fibonachi[0] = 0;
+//     fibonachi[1] = 1;
+//     for(int i = 2; i < fibonachi.Length; i++)
+//     {
+//         fibonachi[i] = fibonachi[i-1] + fibonachi[i-2];
+//     }
+//     return fibonachi;
+// }   
+
+// void PrintArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if (i == 0)
+//         {
+//             Console.Write($"[{array[i]}, ");
+//         }
+//         else if (i == array.Length - 1)
+//         {
+//                 Console.Write($"{array[i]}]");
+//         }
+//         else
+//         {
+//                 Console.Write($"{array[i]}, ");
+//         }
+//     }
+// }
+
+// Console.Write("Imput N: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] fibonachi = new int[n];
+
+// Console.Write($"If N = {n} -> ");
+// int[] myArray = Fibonachi(fibonachi);
+// PrintArray(myArray);
