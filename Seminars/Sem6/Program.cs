@@ -22,24 +22,24 @@
 
 // void PrintArray(int[] array) // Выводит на экран созданный массив
 // {
-//     for (int i = 0; i < array.Length; i++ ) // цикл  повторений до завершения
+//     for (int i = 0; i < array.Length; i++ ) // цикл повторений до завершения
 //     {
-//         System.Console.Write( array[i] + " "); // содержимое массива
+//         System.Console.Write( array[i] + " "); // выводим содержимое массива
 //     }
 //     System.Console.WriteLine(); // <- Пустая строка при выводе на экран
 // }
 
-// // Пишем метод разворота массива
-// // Используем буферную переменную, чтобы запомнить элемент, который переставляем
+// // * Пишем метод разворота массива
+// // Используем буферную переменную "temp", чтобы запомнить элемент, который переставляем
 
 // int[] ReversArray(int[] array)
 // {
-// 	int temp; // буфер обмена, обозначаем, не присваивая значений
+// 	int temp; // буферную переменную, только обозначаем, не присваивая значений
 // 	for (int i = 0; i < array.Length/2; i++ ) 
-// 	// "array.Length/2" -завершение цикла на середине массива, 
-// 	// чтобы не переставлять назад уже преставленные числа
+// 	// "array.Length/2" - завершение цикла на середине массива, чтобы не переставлять назад уже преставленные числа
 // 	{
-// 		array[i] = array[array.Length - 1 - i]; // (?) "array.Length - 1" -> "size-1"
+// 		temp = array[i]; // запомнить значение 1-го элемента
+//         array[i] = array[array.Length - 1 - i]; // сдвигаемся на один элемент в начале и в конце
 // 		array[array.Length - 1 - i] = temp;
 // 	}
 // 	return array; 	
@@ -52,10 +52,10 @@
 // System.Console.Write("Imput maxsimal value: ");
 // int max = Convert.ToInt32(Console.ReadLine());
 
-// int[] myArray = CreateRandomArray(size, min, max); // произвольно формированный массив
-// PrintArray(myArray); // вывод сформированного массива на экран
-// myArray = ReversArray(myArray); // передача перевернутого массива в "myArray"
-// PrintArray(myArray); // вывод перевернутого массива на экран
+// int[] myArray = CreateRandomArray(size, min, max); // передаём в "myArray" сформированный массив
+// PrintArray(myArray); // вывод переданного (исходного) массива на экран
+// myArray = ReversArray(myArray); // теперь передаём в "myArray" перевернутый массив
+// PrintArray(myArray); // выводим перевернутый массив на экран
 
 // dotnet run - проверка работоспособности
 // ---------------------------------------
