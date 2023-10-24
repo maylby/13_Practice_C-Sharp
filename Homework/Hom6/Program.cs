@@ -75,12 +75,12 @@
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-// double[] FindPointCross(double[] line1, double[] line2)
+// double[] FindPointCross(double k1, double b1, double k2, double b2)
 // {
-//     double[] coord = new double[];
-//     coord[x] = (b2 - b1)/(k1 - k2);
-//     coord[y] = k1*x + b1;
-//     return coord;
+    
+//     double x = (b2 - b1)/(k1 - k2);
+//     double y = k1*x + b1;
+//     double y = k2*x + b2;
 // }
 
 // bool CheckLines(double[] line1, double[] line2)
@@ -110,6 +110,7 @@
 // System.Console.Write("Input value k2: ");
 // double k2 = Convert.ToDouble(Console.ReadLine());
 
-// double myLine = FindPointCross(line1, line2);
+// double myLine = FindPointCross(k1, b1, k2, b2);
 // CheckLines(myLine);
 // System.Console.Write($"({b1}, {k1}); ({b2}, {k2}) -> {FindPointCross(line1, line2)}");
+
