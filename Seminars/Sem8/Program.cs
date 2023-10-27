@@ -71,3 +71,75 @@
 // int[,] myArray = Creat2DRandomArray(row, column, min, max);
 // Print2DArray(myArray);
 // Print2DArray(ChangeArrayRows(myArray, row1, row2));
+
+
+// 00:30:00
+
+// Задание 2 /куратор семинара/
+
+// **Задача 55:** 
+// Задайте двумерный массив. 
+// Напишите программу, которая заменяет строки на столбцы. 
+// Если это невозможно, программа выводит сообщение для пользователя.
+
+
+// int[,] Creat2DRandomArray(int row, int column, int minValue, int maxValue)
+// {
+// 	int [,] array = new int[row, column]; 
+// 	for (int i = 0; i < row; i++)
+// 	{
+// 		for (int j = 0; j < column; j++)
+// 		{
+// 			array[i, j] = new Random().Next(minValue, maxValue +1);
+// 		}
+// 	}
+// 	return array;
+// }
+
+// void Print2DArray(int[,] array)
+// {
+// 	for (int i = 0; i < array.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < array.GetLength(1); j++)
+// 		{
+// 			Console.Write(array[i, j] +" ");		
+// 		}
+// 		Console.WriteLine(); // перенос следующей строки массива на новую строку
+// 	}
+//     Console.WriteLine(); // разрыв между исходным и изменённым массивами
+// }
+
+// int[,] RowsToColunms(int[,] array)
+// {
+//     if(array.GetLength(0) != array.GetLength(1))
+//     {
+//         Console.WriteLine("Invalid array");
+//         return array;
+//     }
+//     else
+//     {
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             for (int j = i + 1; j < array.GetLength(1); j++)
+//             {
+//                 int temp = array[i, j];
+//                 array[i, j] = array[j, i];
+//                 array[j, i] = temp;
+//             }
+//         }
+//     }
+//     return array;
+// }
+
+// Console.WriteLine("Input number of rows: ");
+// int row = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columns: ");
+// int column = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input maximal value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[,] myArray = Creat2DRandomArray(row, column, min, max);
+// Print2DArray(myArray);
+// Print2DArray(RowsToColunms(myArray));
