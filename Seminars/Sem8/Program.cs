@@ -109,7 +109,7 @@
 //     Console.WriteLine(); // разрыв между исходным и изменённым массивами
 // }
 
-// int[,] RowsToColunms(int[,] array)
+// int[,] RowsToColumns(int[,] array)
 // {
 //     if(array.GetLength(0) != array.GetLength(1))
 //     {
@@ -142,23 +142,89 @@
 
 // int[,] myArray = Creat2DRandomArray(row, column, min, max);
 // Print2DArray(myArray);
-// Print2DArray(RowsToColunms(myArray));
+// Print2DArray(RowsToColumns(myArray));
 
 
-// 00:46:00
+// // 00:46:00
 
-// Задача 59: 
-// Задайте двумерный массив из целых чисел. 
-// Напишите программу, которая удалит строку и столбец, 
-// на пересечении которых расположен наименьший элемент массива.
+// // Задача 59: 
+// // Задайте двумерный массив из целых чисел. 
+// // Напишите программу, которая удалит строку и столбец, 
+// // на пересечении которых расположен наименьший элемент массива.
 
-// Например, задан массив:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// 5 2 6 7
-// Наименьший элемент - 1, 
-// на выходе получим следующий массив:
-// 9 4 2
-// 2 2 6
-// 3 4 7
+// // Например, задан массив:
+// // 1 4 7 2
+// // 5 9 2 3
+// // 8 4 2 4
+// // 5 2 6 7
+
+// // Наименьший элемент - 1, 
+// // на выходе получим следующий массив:
+// // 9 4 2
+// // 2 2 6
+// // 3 4 7
+
+// int[,] Creat2DRandomArray(int row, int column, int minValue, int maxValue)
+// {
+// 	int [,] array = new int[row, column]; 
+// 	for (int i = 0; i < row; i++)
+// 	{
+// 		for (int j = 0; j < column; j++)
+// 		{
+// 			array[i, j] = new Random().Next(minValue, maxValue +1);
+// 		}
+// 	}
+// 	return array;
+// }
+
+// void Print2DArray(int[,] array)
+// {
+// 	for (int i = 0; i < array.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < array.GetLength(1); j++)
+// 		{
+// 			Console.Write(array[i, j] +" ");		
+// 		}
+// 		Console.WriteLine(); // перенос следующей строки массива на новую строку
+// 	}
+//     Console.WriteLine(); // разрыв между исходным и изменённым массивами
+// }
+
+// int[,] ZeroModifiedArray(int[,] array)
+// {
+//     int min = array[0, 0];
+//     int imin = 0;
+//     int jmin = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if(array[i, j] <= min) 
+//             // при "< min", ищется 1-й минимальный элемент, 
+//             // при "<= min", последний
+//             {
+//                 min = array[i, j];
+//                 imin = i;
+//                 jmin = j;
+//             }
+//         }
+//     }
+//     for (int j = 0; j < array.GetLength(1); j++) array[imin, j] = 0;
+//     for (int i = 0; i < array.GetLength(0); i++) array[i, jmin] = 0;
+//     return array;
+// }
+
+// Console.WriteLine();
+// Console.Write("Input number of rows: ");
+// int row = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input number of columns: ");
+// int column = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input minimal value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input maximal value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// int[,] myArray = Creat2DRandomArray(row, column, min, max);
+// Print2DArray(myArray);
+// Print2DArray(ZeroModifiedArray(myArray));
