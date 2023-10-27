@@ -9,6 +9,49 @@
 // 5 -2 33 -2
 // 77 3 8 1
 
+// * Метод создания двумерного массива
+
+// int [,] Creat2DRandomArray(int row, int column, int minValue, int maxValue)
+// {
+// 	int [,] array = new int[row, column];
+// 	// запись элементов, сгенерированных способом "Random().Next()"
+// 	for (int i = 0; i < row; i++) // "row" - это "size" строки
+// 	{
+// 		for (int j = 0; j < column; j++) // "column" - это "size" колонки
+// 		{
+// 			array[i, j] = new Random().Next(minValue, maxValue +1);
+// 		}
+// 	}
+// 	return array;
+// }
+
+
+// // * Метод вывода на экран двумерного массива
+
+// void Print2DArray(int[,] array)
+// {
+// 	for (int i = 0; i < array.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < array.GetLength(1); j++)
+// 		{
+// 			Console.Write(array[i, j] +" ");		
+// 		}
+// 		Console.WriteLine(); // перенос на новую строку
+// 	}
+// }
+
+// Console.WriteLine("Input number of rows: ");
+// int row = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columns: ");
+// int column = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input maximal value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[,] myArray = Creat2DRandomArray(row, column, min, max);
+// Print2DArray(myArray);
+
 
 // **Задача 51:** 
 // Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
