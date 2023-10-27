@@ -1,6 +1,6 @@
 ﻿// Семинар 7 Двумернные массивы
 
-// **Задача 46:** 
+// **Задача 46:** /куратор семинара/
 // Задайте двумерный массив размером m×n, 
 // заполненный случайными целыми числами.
 
@@ -53,7 +53,7 @@
 // Print2DArray(myArray);
 
 
-// **Задача 51:** 
+// **Задача 51:** /куратор семинара/
 // Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
 
 // Например, задан массив:
@@ -64,67 +64,67 @@
 
 // Сумма элементов главной диагонали: 1+9+2 = 12
 
-int[,] Creat2DRandomArray(int row, int column, int minValue, int maxValue)
-{
-	int [,] array = new int[row, column]; 
-	for (int i = 0; i < row; i++)
-	{
-		for (int j = 0; j < column; j++)
-		{
-			array[i, j] = new Random().Next(minValue, maxValue +1);
-		}
-	}
-	return array;
-}
+// int[,] Creat2DRandomArray(int row, int column, int minValue, int maxValue)
+// {
+// 	int [,] array = new int[row, column]; 
+// 	for (int i = 0; i < row; i++)
+// 	{
+// 		for (int j = 0; j < column; j++)
+// 		{
+// 			array[i, j] = new Random().Next(minValue, maxValue +1);
+// 		}
+// 	}
+// 	return array;
+// }
 
-void Print2DArray(int[,] array)
-{
-	for (int i = 0; i < array.GetLength(0); i++)
-	{
-		for (int j = 0; j < array.GetLength(1); j++)
-		{
-			Console.Write(array[i, j] +" ");		
-		}
-		Console.WriteLine(); // перенос на новую строку
-	}
-}
+// void Print2DArray(int[,] array)
+// {
+// 	for (int i = 0; i < array.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < array.GetLength(1); j++)
+// 		{
+// 			Console.Write(array[i, j] +" ");		
+// 		}
+// 		Console.WriteLine(); // перенос на новую строку
+// 	}
+// }
 
-int SumOfMainDiagonal(int[,] array)
-{
-	int sum = 0;
-	for (int i = 0; i < array.GetLength(0); i++)
-	{ // скобку можно не ставить, записав "for(j)" под "for(i)" (см. ниже)
-		for (int j = 0; j < array.GetLength(1); j++)
-		{
-			if (i == j) sum += array[i, j];
-		}
-	} // эта закрывающая скобка тоже не нужна (см. запись ниже)
-	return sum;
-}
+// int SumOfMainDiagonal(int[,] array)
+// {
+// 	int sum = 0;
+// 	for (int i = 0; i < array.GetLength(0); i++)
+// 	{ // скобку можно не ставить, записав "for(j)" под "for(i)" (см. ниже)
+// 		for (int j = 0; j < array.GetLength(1); j++)
+// 		{
+// 			if (i == j) sum += array[i, j];
+// 		}
+// 	} // эта закрывающая скобка тоже не нужна (см. запись ниже)
+// 	return sum;
+// }
 
-// ** Упрощённый вариант записи циклов "for" без фигурных скобок 
-// (проверить в VSCode запись "for(j)" с табуляцией и без)
+// // ** Упрощённый вариант записи циклов "for" без фигурных скобок 
+// // (проверить в VSCode запись "for(j)" с табуляцией и без)
 
-//	for (int i = 0; i < row.GetLength(0); i++)
-//		for (int j = 0; j < column.GetLength(1); j++)
-//		{
-//			if (i == j) sum += array[i, j];
-//		}
-//	return sum;
+// //	for (int i = 0; i < row.GetLength(0); i++)
+// //		for (int j = 0; j < column.GetLength(1); j++)
+// //		{
+// //			if (i == j) sum += array[i, j];
+// //		}
+// //	return sum;
 
-Console.WriteLine("Input number of rows: ");
-int row = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number of columns: ");
-int column = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input minimal value: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input maximal value: ");
-int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of rows: ");
+// int row = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columns: ");
+// int column = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input maximal value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
 
-int[,] myArray = Creat2DRandomArray(row, column, min, max);
-Print2DArray(myArray);
-SumOfMainDiagonal(myArray);
-Console.WriteLine(SumOfMainDiagonal(myArray));
+// int[,] myArray = Creat2DRandomArray(row, column, min, max);
+// Print2DArray(myArray);
+// SumOfMainDiagonal(myArray);
+// Console.WriteLine(SumOfMainDiagonal(myArray));
 
 
 // **Задача 48:** 
