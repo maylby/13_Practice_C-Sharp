@@ -31,7 +31,33 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-int FindSumNumbers(int n, int m)
+// int FindSumNumbers(int n, int m)
+// {
+// 	if (n != m)
+// 	{
+// 		if (n > m)
+// 		{
+// 			FindSumNumbers(n - 1, m);
+// 			return m + FindSumNumbers(n - 1, m);
+// 		}
+// 		else
+// 		{
+// 			FindSumNumbers(n, m - 1);
+// 			return n + FindSumNumbers(n, m - 1);
+// 		}
+// 	}
+//     return FindSumNumbers(n, m);
+// }
+
+// Console.Write("Input N: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input M: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// FindSumNumbers(n, m);
+// Console.Write($"M = {m}; N = {n} -> {FindSumNumbers(n, m)}");
+
+
+void FindSumNumbers(int n, int m)
 {
 	if (n != m)
 	{
