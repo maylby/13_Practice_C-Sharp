@@ -37,3 +37,33 @@
 // int num = Convert.ToInt32(Console.ReadLine());
 
 // System.Console.Write($"N = {num} -> sum digit: {FindSumDigit(num)}");
+
+
+// Задача 3.
+// Задать значения M и N. Написать программу, которая
+// выводит все натуральные числа в промежутке от M до N.
+// M = 1, N = 5 -> 1, 2, 3, 4, 5
+
+// void ShowNumbersGap(int n, int m)
+// {
+//     if (n != m)
+//     {
+//         if (n > m)
+//         {
+//             ShowNumbersGap(n - 1, m);
+//             System.Console.Write(n + ", ");
+//         }
+//         else 
+//         {
+//             ShowNumbersGap(n, m - 1);
+//             System.Console.Write(m + ", ");
+//         }
+//     }
+//     else System.Console.Write(n + ", ");
+// }
+// Console.Write("Input N: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input M: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+
+// ShowNumbersGap(n, m);
