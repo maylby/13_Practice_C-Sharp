@@ -14,8 +14,7 @@
 // {
 // 	if (n >= 1)
 // 	{
-// 		Console.Write($"{n}, "); 
-// 		// престановка местами "CW" и метода для обратного порядка вывода чисел
+// 		Console.Write($"{n}, "); // смена мест "CW" и метода для обратного порядка вывода чисел
 // 		ShowReNumbers(n - 1);
 // 	}
 // }
@@ -38,46 +37,21 @@
 // 		if (n > m)
 // 		{
 // 			FindSumNumbers(n - 1, m);
-// 			return m + FindSumNumbers(n - 1, m);
+// 			return n + FindSumNumbers(n - 1, m);
 // 		}
 // 		else
 // 		{
 // 			FindSumNumbers(n, m - 1);
-// 			return n + FindSumNumbers(n, m - 1);
+// 			return m + FindSumNumbers(n, m - 1);
 // 		}
 // 	}
-//     return FindSumNumbers(n, m);
+//     return n;
 // }
 
 // Console.Write("Input N: ");
 // int n = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Input M: ");
 // int m = Convert.ToInt32(Console.ReadLine());
-// FindSumNumbers(n, m);
-// Console.Write($"M = {m}; N = {n} -> {FindSumNumbers(n, m)}");
 
-
-void FindSumNumbers(int n, int m)
-{
-	if (n != m)
-	{
-		if (n > m)
-		{
-			FindSumNumbers(n - 1, m);
-			return m + FindSumNumbers(n - 1, m);
-		}
-		else
-		{
-			FindSumNumbers(n, m - 1);
-			return n + FindSumNumbers(n, m - 1);
-		}
-	}
-    return FindSumNumbers(n, m);
-}
-
-Console.Write("Input N: ");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input M: ");
-int m = Convert.ToInt32(Console.ReadLine());
-FindSumNumbers(n, m);
-Console.Write($"M = {m}; N = {n} -> {FindSumNumbers(n, m)}");
+// int result = FindSumNumbers(n, m);
+// Console.Write($"M = {m}; N = {n} -> {result}");
