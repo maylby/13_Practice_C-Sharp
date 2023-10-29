@@ -67,3 +67,22 @@
 // int m = Convert.ToInt32(Console.ReadLine());
 
 // ShowNumbersGap(n, m);
+
+
+// Задача 4.
+// Программа принимает на вход 2 числа "А" и "В"
+// и возводит число "А" в целую степень "В" с помощью рекурсии.
+
+// int NumToPower(int a, int b)
+// {
+//     if (b == 0) return 1;
+//     return a*Power(a, b - 1);
+// }
+
+// Console.Write("Input A: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input B: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+
+// int result = NumToPower(a, b);
+// Console.WriteLine($"{a} to power {b} -> {result}");
