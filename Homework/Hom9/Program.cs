@@ -10,17 +10,17 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-void ShowReNumbers(int n)
-{
-	if (n >= 1)
-	{
-		Console.Write($"{n} -> {n}, "); 
-		// престановка местами "CW" и метода для обратного порядка вывода чисел
-		ShowReNumbers(int n - 1);
-	}
-}
+// void ShowReNumbers(int n)
+// {
+// 	if (n >= 1)
+// 	{
+// 		Console.Write($"{n}, "); 
+// 		// престановка местами "CW" и метода для обратного порядка вывода чисел
+// 		ShowReNumbers(n - 1);
+// 	}
+// }
 
-Console.Write("Input N: ");
-int n = Console.ToInt32(Console.ReadLine());
-ShowReNumbers(n);
+// Console.Write("Input N: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// ShowReNumbers(n);
 
