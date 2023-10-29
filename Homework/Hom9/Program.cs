@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Знакомство с языками программирования (семинары)
+// Урок 9. Рекурсия
+// <https://gb.ru/lessons/362986/homework>
+
